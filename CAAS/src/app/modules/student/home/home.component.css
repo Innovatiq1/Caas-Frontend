@@ -1,0 +1,64 @@
+.container {
+    padding: 25px;
+    background-color:white;
+    display: flex;
+    flex-direction: row;
+
+  }
+  
+  .content-container {
+    margin-right:25px;
+  }
+  
+  .image-container {
+    align-self: flex-start;
+  }
+  .tab-group-width {
+    width: 100%;
+  }
+  .btn{
+    padding:0px 40px;
+    margin-right:20px;
+    border:3px;
+    outline: 1px solid blue;
+    border-radius:20px;
+
+  }
+  .search-container {
+    margin-top: 10px; 
+    margin-right:20px;
+  }
+  
+  .search-input {
+    padding:8px 30px; 
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px 20px; 
+    border-radius: 52px;
+  }
+  .title{
+    padding:50px;
+    
+  }
+  .engtext{
+    font-size: 30px;
+  }
+  .ontext{
+    font-size: 30px;
+    color:brown;
+  }
+  .coursetext{
+    font-size: 30px;
+  }
+  .img{
+    height: 400px;
+    margin-left:200px;
+    margin-top:50px;
+  }
+  .flex{
+    display: flex;
+    flex-direction: row;
+  }
+
+
+    

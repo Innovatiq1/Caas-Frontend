@@ -1,14 +1,14 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home/home.component';
 import { Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../shared/shared/shared.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 const route: Routes = [
   // {
     // path: '', component: HomeComponent,
     // children: [
+      { path: 'login', component: LoginComponent },
     // ]
   // }
 
@@ -17,14 +17,12 @@ const route: Routes = [
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    DashboardComponent
+    LoginComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
 
   ]
-
 })
-export class StudentModule { }
+export class OnboardingModule { }

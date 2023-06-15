@@ -1,1 +1,35 @@
-<p>home works!</p>
+<div class="container">
+
+    <div class="image-container">
+        <img src="../../../../assets/images/caas.png">
+      </div>  
+    <div class="content-container">
+      <mat-tab-group mat-align-tabs="start"  class="tab-group-width">
+        <mat-tab label="Home">
+            <div class="flex">
+
+            <div class="title">
+            <h2 class="engtext">Engaging &</h2>
+            <h2 class="ontext">Accessible Online</h2>
+            <h1 class="coursetext">Courses For All</h1><br>
+            <span>Learning Platform that helps Thousands of people to</span><br>
+            <span>acquire courses they need</span><br><br>
+            <img src="../../../../assets/images/img.png">
+        </div>
+        <div>
+            <img class="img" src="../../../../assets/images/tutorial.png">
+        </div>
+    </div>
+        </mat-tab>
+        <mat-tab label="Courses"></mat-tab>
+        <mat-tab label="About"></mat-tab>
+      </mat-tab-group>
+    </div>
+    <div class="search-container">
+        <input matInput type="text" placeholder="Search..." class="search-input">
+      </div>
+          <button class="btn" (click)="navigate()" mat-button>Login</button>
+    <button class="btn" mat-raised-button color="primary">Signup</button>
+
+  </div>
+  
