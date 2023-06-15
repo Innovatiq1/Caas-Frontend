@@ -4,10 +4,12 @@ import { HomeComponent } from './home/home.component';
 import { Routes } from '@angular/router';
 
 const route: Routes = [
-  {
-        path: 'home', component: HomeComponent,
-
-  }
+  // {
+    // path: '', component: HomeComponent,
+    // children: [
+      { path: 'home', component: HomeComponent },
+    // ]
+  // }
 
 ]
 
