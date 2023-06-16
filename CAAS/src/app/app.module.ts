@@ -6,12 +6,11 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './modules/shared/shared/shared.module';
-import { HeaderComponent } from './modules/student/common/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
 
   ],
   imports: [
@@ -20,7 +19,9 @@ import { HeaderComponent } from './modules/student/common/header/header.componen
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
+
 
   ],
   providers: [],

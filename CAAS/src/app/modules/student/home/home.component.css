@@ -1,10 +1,20 @@
-.container {
+.main-container {
     margin: 10px;
     background-color:white;
     display: flex;
     flex-wrap: wrap;
 
   }  
+  .sub-container {
+    background-color:rgb(202, 197, 197);
+
+  }  
+  .fecourse{
+    margin-left:50px;
+    font-size:30px;
+    margin-bottom:30px;
+  }
+
 .card_flex {
   display: inline-flex;
   flex-wrap: wrap;
@@ -72,12 +82,25 @@
     flex-direction: row;
   }
   .card{
-    margin-right:30px;
-    padding:0px 100px 0px 10px; 
+    margin-right:50px;
+    padding:0px 260px 0px 0px; 
     width: 200px;
-    border-radius:10px;
+    border-radius:15px;
   
     
+  }
+  .text-container {
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Display ellipsis (...) for truncated text */
+    flex-grow: 1; /* Allow the text container to expand to fill remaining space */
+  }
+  
+  .image-container {
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+  
+  .image-container  {
+    width: 50px; /* Adjust the width as needed */
   }
 
   .card2 {
@@ -87,11 +110,12 @@
     padding-left: 120px;
   }
   .h2{
-    margin-left:60px;
+    margin-left:25px;
   }
   .course{
     color: grey;
-    margin : 5px
+    margin : 5px;
+    margin-left:15px;
   }
   .left-half {
     width: 30%;
@@ -113,11 +137,14 @@
 }
 .img{
   height:70%;
-  margin-left:150px;
+  margin-left:250px;
   margin-top:10px;
 }
 .title{
   margin-left:50px;
+}
+.cimg{
+  height:30%
 }
 
     

@@ -4,19 +4,27 @@
     justify-content: space-around;
 }
 .search-input {
-    padding:8px 30px; 
+    padding:0px 20px; 
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: 20px 20px; 
+    background-size: 0px 20px; 
     border-radius: 52px;
   }
   .btn{
     padding:0px 40px;
-    margin-right:20px;
     border:3px;
-    outline: 1px solid blue;
+    outline: 1px solid  rgb(72, 72, 119);;
     border-radius:20px;
 
+  }
+  .sbtn{
+    border-radius: 25px;
+    background-color: rgb(72, 72, 119);
+    color: white;
+    padding:10px 30px 10px 30px;
+    margin-right:20px;
+    margin-bottom:20px;
+    font-family:sans-serif;
   }
   .container-fluid{
     margin-top:25px;
