@@ -11,25 +11,40 @@
     width:100%
   }
   .wel{
-margin-top:200px;
-margin-left:250px  }
+margin-top:150px;
+margin-left:220px;
+font-size: 40px;  }
 .gimg{
     width:20px;
+    margin-right:10px;
 }
 .gbtn{
-  margin-left:250px;
+  margin-left:220px;
+  margin-top:10px;
+  padding:0px 65px 0px 40px
 }
 .ortext{
-  margin-left:250px
+  margin-left:230px
 }
 .field{
   margin-left:250px;
-  border-radius: 15px;
-
 }
 .btn{
   margin-left:280px;
   border-radius: 15px;
-  color:orange;
+  margin-top:10px;
+color: chocolate;
+padding:0px 30px 0px 30px;
+}
+.fpswrd{
+  margin-left:330px;
+  color:palevioletred
+}
+.signuptext{
+  margin-left:250px;
+}
+.signup{
+  color:palevioletred
+
 }
 

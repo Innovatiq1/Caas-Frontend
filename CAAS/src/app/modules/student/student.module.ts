@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HomeContentComponent } from './home/home-content/home-content/home-content.component';
+import { HeaderComponent } from './common/header/header.component';
 
 const route: Routes = [
   // {
@@ -18,7 +20,8 @@ const route: Routes = [
 @NgModule({
   declarations: [
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeContentComponent,
   ],
   imports: [
     CommonModule,

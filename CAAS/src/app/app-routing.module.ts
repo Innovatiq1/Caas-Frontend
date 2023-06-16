@@ -5,7 +5,7 @@ import { LoginComponent } from './modules/onboarding/login/login.component';
 import { DashboardComponent } from './modules/student/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'student', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 
   {
     path: 'student',

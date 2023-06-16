@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    overflow: none;
+    justify-content: space-around;
+}
+.search-input {
+    padding:8px 30px; 
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px 20px; 
+    border-radius: 52px;
+  }
+  .btn{
+    padding:0px 40px;
+    margin-right:20px;
+    border:3px;
+    outline: 1px solid blue;
+    border-radius:20px;
+
+  }
+  .container-fluid{
+    margin-top:25px;
+    /* position: fixed; */
+  }
+
