@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Renderer2 } from '@angular/core';
+
 
 @Component({
   selector: 'app-course-detail',
@@ -7,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./course-detail.component.css']
 })
 export class CourseDetailComponent {
+  featuredCourse = false;
+  stackableCourse = false;
   data = [
     {
       dates: '19 – 23 Jun 2023',
@@ -16,16 +20,32 @@ export class CourseDetailComponent {
     }
   ];
   currentUrl: string;
-  constructor(private router: Router){
+  constructor(private router: Router,private activatedRoute: ActivatedRoute,private renderer: Renderer2){
     let urlPath=this.router.url.split('/')
     this.currentUrl=urlPath[urlPath.length - 1];
+    this.activatedRoute.queryParams.subscribe((params: any) => {
+      if(params.coursetype === 'featured-course'){
+        this.featuredCourse = true;
+      }
+      else if(params.coursetype === 'stackable-course'){
+        this.stackableCourse = true;
+      }
+    });
+
   
   }
   navigate(){
-    let email=localStorage.getItem('email');
-    if(!email){
+    // let email=localStorage.getItem('email');
+    // if(!email){
         this.router.navigate(['/login']);
-    }
+    // }
+  }
+  ngOnInit(){
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
   }
 
 }

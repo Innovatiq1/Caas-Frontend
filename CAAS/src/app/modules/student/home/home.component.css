@@ -6,14 +6,21 @@
 
   }  
   .sub-container {
-    background-color:rgb(202, 197, 197);
+    background-color:#f0f0f0;
 
   }  
   .fecourse{
     margin-left:50px;
-    font-size:30px;
-    margin-bottom:30px;
+    font-size: 28px;
   }
+  .titletexts{
+    font-size:17px;
+    cursor: pointer;
+  }
+  .title-stack{
+    font-size:17px;
+  }
+
 
 .card_flex {
   display: inline-flex;
@@ -74,18 +81,15 @@
   .spantxt{
     font-size:20px;
   }
-  .center{
-
-  }
   .flex{
     display: flex;
     flex-direction: row;
   }
   .card{
-    margin-right:50px;
     padding:0px 260px 0px 0px; 
     width: 200px;
     border-radius:15px;
+    margin-left:60px;
   
     
   }
@@ -136,9 +140,10 @@
   overflow: none;
 }
 .img{
-  height:70%;
   margin-left:250px;
   margin-top:10px;
+  max-width: 500px;
+  margin-bottom:30px;
 }
 .title{
   margin-left:50px;
@@ -146,5 +151,101 @@
 .cimg{
   height:30%
 }
+.carouse-container{
+  margin-bottom:40px;
+  margin-left:30px;
+
+}
+.image-slider {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left:8px;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.images-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  margin: 10px;
+  text-align: start;
+}
+
+.images-container img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* .images-container p {
+  margin-top: 10px;
+} */
+.images-container h3{
+  font-size: 14px;
+  margin-bottom:1px;
+  cursor: pointer;
+
+}
+
+.slider-btn{
+  background-color:blue;
+  border-radius: 13px;
+  color: white;
+  padding:15px 10px 15px 10px;
+  border:1px solid white;
+}
+.dates{
+  background-color:chocolate;
+  padding:1px 5px 1px 5px;
+}
+.learnbtn{
+  border-radius: 25px;
+  background-color: rgb(72, 72, 119);
+  color: white;
+  padding:10px 30px 10px 30px;
+  margin-right:20px;
+  margin-bottom:20px;
+  font-family:sans-serif;
+
+}
+.carousel{
+  border-radius: 7px;
+  box-shadow: 2px;
+}
+.arrowimg{
+  max-width: 20px;
+}
+.content-texts{
+  font-size: 15px;
+}
+.date-texts{
+  font-size: 15px;
+}
+.lt{
+  font-size: 30px;;
+}
+.sbtn{
+  border-radius: 20px;
+  background-color: rgb(72, 72, 119);
+  color: white;
+  padding:10px 30px 10px 30px;
+  margin-right:20px;
+  margin-bottom:20px;
+  font-family:sans-serif;
+  max-width:50%;
+  border:1px solid white
+
+}
+
+
+
+
 
     

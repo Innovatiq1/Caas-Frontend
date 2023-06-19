@@ -1,7 +1,7 @@
-<div *ngIf="currentUrl == 'course-detail'">
+<!-- <div *ngIf="currentUrl == 'course-detail'">
     <app-header></app-header>
-    </div>
-<div class="container">
+    </div> -->
+<div *ngIf = "featuredCourse" class="container">
     <h2 class="texts">Personnel Licensing (PEL) for Regulators 
     </h2>
     <span>You will gain the fundamental knowledge required of Personnel Licensing (PEL) officers and inspectors.
@@ -46,5 +46,73 @@
 
       
 </div>
+<div *ngIf = "stackableCourse" class="container">
+  <h2 class="texts">Civil Aviation Management 
+  </h2>
+  <span>You will gain the fundamental knowledge required of Civil Aviation Management.
+  </span><br><br>
+  <h2 class="texts">Learning Outcomes</h2>
+  <span class="spantexts">At the end of the course, you will be able to:</span>
+  <ul>
+      <li>Understand the economic and non-economic
+        drivers for airport regulators, airports and airlines</li>
+      <li>Identify the common concerns and key trends in
+        civil aviation development</li>
+      <li>Identify the key considerations in policies making
+        for the various civil aviation components</li>
+      <li>Plan and execute the key deliverables to meet
+          your national and organisation’s needs </li>
+      <li>Design policies to manage the industry’s
+            challenges
+            </li>
+    </ul>
+    <br>
+    <h2 class="texts"> Who Should Attend</h2>
+    <span>This course is recommended for Senior executives, managers or professionals who
+      want to understand the challenges facing the industry
+      and have a good grounding in aviation management      
+    </span><br><br>
+    <h2 class="texts"> Programmes</h2>
+    <button class="sbtn" ><b>Aviation Management</b></button>
+    <div class="left-half">
+    <h2 class="pgm">Compulsory Programmes</h2>
+    <div class="list-group">
+      <a class="list-group-item">Aviation Leaders Programme in Public Policy </a>
+      <a class="list-group-item">Civil Aviation Management Programme (CAMP)
+        Module 1: Developing an Air Hub </a>
+        <a class="list-group-item">CAMP Module 2: Regulations and Future of
+          Aviation  </a>
+  
+    </div>
+    <br>
+    </div>
+    <div class="right-half">
+
+    <h2 class="pgm">Elective Programmes</h2>
+    <div class="list-group">
+      <a class="list-group-item">The Geopolitics of Aviation      </a>
+      <a class="list-group-item">Aviation Crisis Management Programme
+        </a>
+        <a class="list-group-item">Emergency Management Workshop
+        </a>
+        <a class="list-group-item">ICAO Training Package: International Air Law
+        </a>
+        <a class="list-group-item">Redefining Aviation of Tomorrow: Disruptions,
+          Innovations, and Opportunities
+        </a>
+        <a class="list-group-item">Data Analytics and Machine Learning </a>
+        <a class="list-group-item">ICAO Training Package: CORSIA
+          Verification</a>
+      </div>
+      </div>
+      <br><br><br><br><br>      <br><br><br><br><br>
+      <br><br><br><br><br>
+      <br><br><br><br><br>
+
+    <div class="flex">
+    <button class="btn" ><b>Find Out More</b></button>
+    <button class="btn"  (click)="navigate()"><b>Apply Now</b></button>
+  </div>
+  </div>
 
     

@@ -11,17 +11,32 @@
     width:100%
   }
   .wel{
-margin-top:150px;
+margin-top:80px;
 margin-left:220px;
 font-size: 40px;  }
 .gimg{
     width:20px;
     margin-right:10px;
 }
-.gbtn{
+/* .gbtn{
   margin-left:220px;
   margin-top:10px;
-  padding:0px 65px 0px 40px
+  padding:0px 60px 0px 40px;
+  background-color: brown;
+} */
+.gbtn{
+  margin-left:220px;
+  background-color: rgb(72, 72, 119);
+  color: white;
+  padding:7px 60px 7px 40px;
+  margin-right:20px;
+  font-family:sans-serif;
+  border:1px solid white
+
+}
+.lgbtn{
+  margin-left:20px;
+  color: white;
 }
 .ortext{
   margin-left:230px
@@ -30,11 +45,17 @@ font-size: 40px;  }
   margin-left:250px;
 }
 .btn{
-  margin-left:280px;
-  border-radius: 15px;
-  margin-top:10px;
-color: chocolate;
-padding:0px 30px 0px 30px;
+  margin-left:300px;
+  border-radius: 25px;
+  background-color: rgb(72, 72, 119);
+  color: white;
+  padding:10px 30px 10px 30px;
+  margin-right:20px;
+  margin-bottom:20px;
+  font-family:sans-serif;
+  padding:10px 40px 10px 40px;
+  border:1px solid white
+
 }
 .fpswrd{
   margin-left:330px;
@@ -46,5 +67,8 @@ padding:0px 30px 0px 30px;
 .signup{
   color:palevioletred
 
+}
+.verimg{
+  margin-left:250px;
 }
 

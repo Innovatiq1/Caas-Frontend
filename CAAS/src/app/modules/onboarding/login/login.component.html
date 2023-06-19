@@ -1,10 +1,10 @@
 <div class="left-half">
-    <img class="img" src="../../../../assets/images/login-image.png">
+    <img class="img" src="../../../../assets/images/loginimage.png">
   </div>
   
   <div class="right-half">
     <h1 class="wel">Welcome Back</h1>
-    <button mat-raised-button class="gbtn" ><img class="gimg" src="../../../../assets/images/google.png">Login With Google</button><br><br>
+    <button  class="gbtn" ><b class="lgbtn">Login with Singpass</b></button><br><br>
                 <span class="ortext">_______________OR_________________</span><br><br>
 <form [formGroup]="loginForm">
   <div class="form_group">
@@ -19,8 +19,9 @@
 </mat-form-field>
 <mat-error *ngIf="isSubmitted" class="field">{{utils.getErrorMessage(loginForm, "password")?.message}}</mat-error>
 </div>
-<a href="#" class="fpswrd">Forgot Password ?</a>
-<button  class="btn" (click)="onSubmit()"mat-raised-button >Login
+<a href="#" class="fpswrd">Forgot Password ?</a><br><br>
+<img class="verimg" src="../../../../assets/images/verification.png"><br><br>
+<button  class="btn" (click)="onSubmit()" ><b>Login</b>
   <!-- <mat-icon>trending_flat</mat-icon> -->
 </button><br><br>
 <span class="signuptext">Don't Have An Account ! <a  class="signup"href="#">Signup</a></span>

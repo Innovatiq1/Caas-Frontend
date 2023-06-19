@@ -8,8 +8,8 @@
     <h2 class="engtext">Engaging &</h2>
     <h2 class="ontext">Accessible Online</h2>
     <h1 class="coursetext">Courses For All</h1><br>
-    <span class="spantxt">Learning Platform that helps Thousands of people</span><br>
-    <span class="spantxt">to acquire courses they need</span><br><br>
+    <span class="spantxt">Learning Platform that helps thousands of people</span><br><br>
+    <span class="spantxt">to acquire courses they need</span><br><br><br><br>
     <img src="../../../../assets/images/img.png">
   </div>
   <div>
@@ -73,65 +73,42 @@
       </div>
   </div>
   <div class="sub-container">
-    <h2 class="fecourse">Featured Course</h2>
-    <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide>
-        <div class="slide">
-          <img src="https://picsum.photos/id/905/400/300.jpg">
+    <br>
+    <h2 class="fecourse">Featured Courses by CAAS</h2>
+    <div class="carouse-container">
+    <div class="image-slider">
+      <button class="slider-btn" (click)="showPreviousImages()" [hidden]="isFirstPage()"><span class="lt">&lt;</span></button>
+      <div class="slider">
+        <div  class="images-container" *ngFor="let image of visibleImages; let i = index">
+          <img  class="carousel"(click)="openCourse('featured-course')" [src]="image.src" [alt]="image.alt">
+          <h2 class="titletexts" (click)="openCourse('featured-course')">{{image.title}}</h2>
+          <span class="content-texts">{{ image.text }}</span>
+          <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
+          <!-- <button class="learnbtn" type="button"><b>Learn More</b></button> -->
         </div>
+      </div>
+      <button class="slider-btn" (click)="showNextImages()" [hidden]="isLastPage()"><span class="lt">&gt;</span></button>
+    </div>
     
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="slide">
-          <img src="https://picsum.photos/id/507/400/300.jpg">
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="slide">
-          <img src="https://picsum.photos/id/609/400/300.jpg">
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="slide">
-          <img src="https://picsum.photos/id/995/400/300.jpg">
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="slide">
-          <img src="https://picsum.photos/id/1054/400/300.jpg">
-        </div>
-      </ng-template>
-    </owl-carousel-o>
+  </div>
+  <h2 class="fecourse">Stackable Programmes by CAAS</h2>
+  <div class="carouse-container">
+    <div class="image-slider">
+      <button class="slider-btn" (click)="showPreviousStack()" [hidden]="isFirst()"><span class="lt">&lt;</span></button>
+      <div class="slider">
+        <div  class="images-container" *ngFor="let image of stackableImages; let i = index">
+          <img class="carousel" (click)="openCourse('stackable-course')"  [src]="image.src">
+          <h2 class="title-stack">{{image.title}}</h2>
+          <p>{{ image.text }}</p>
+          <button class="sbtn"(click)="openCourse('stackable-course')" ><b>Learn More</b></button>
 
-    <!-- <owl-carousel-o [options]="customOptions" class="mg-b40">
-      <ng-template carouselSlide >
-          <div class="webinar-box1 article-box1">
-              <div class="webinar-image-box1">
-                  <img class="zoom-image" src="../../../../assets/images/book.png"
-                      alt="Article Image">
-                  <i class="fa fa-heart fav-projects" [ngClass]="{'active' : 'hu'}"
-                      aria-hidden="true"
-                    ></i>
-              </div>
-              <div class="webinar-content-box1">
-                  <a class="post-title1 webinar-title1" >project</a>
-                  <p class="tags-box1">
-                      <span class="article-tags1" >tag</span>
-                  </p>
-                  <p class="post-description1 webinar-desc1 top-gap1">
-                      <span>des</span></p>
-                  <div style="display: flex;align-items: center;">
-                      <img src="../../../../assets/images/live.png" style="width: 12px;" alt="">
-                      <p style="margin-bottom: 0;margin-left: 7px;font: normal normal normal 12px/16px Nunito;
-          letter-spacing: 0px; color: #141414;"> spots available</p>
-                  </div>
-                  <p class="posted-date1 top-gap1"><span>Last date of joining : </span></p>
-              </div>
-          </div>
-      </ng-template>
-  </owl-carousel-o> -->
-
-
+        </div>
+      </div>
+      <button class="slider-btn" (click)="showNextStack()" [hidden]="isLast()"><span class="lt">&gt;</span></button>
+    </div>
+    
+  </div>
+<br><br>
 </div>
 
 

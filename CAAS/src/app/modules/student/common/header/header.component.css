@@ -1,20 +1,22 @@
 .header {
     display: flex;
-    overflow: none;
-    justify-content: space-around;
+    flex-direction: row;
 }
 .search-input {
-    padding:0px 20px; 
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 0px 20px; 
+    /* padding:0px 20px;  */
+    /* background-repeat: no-repeat;
+    background-position: right center; */
+    /* background-size: 0px 20px;  */
     border-radius: 52px;
+    padding:1px 1px;
+    margin-left:65px;
   }
   .btn{
     padding:0px 40px;
     border:3px;
     outline: 1px solid  rgb(72, 72, 119);;
     border-radius:20px;
+    margin-left:250px;
 
   }
   .sbtn{
@@ -24,10 +26,19 @@
     padding:10px 30px 10px 30px;
     margin-right:20px;
     margin-bottom:20px;
+    margin-left:30px;
     font-family:sans-serif;
+    border:1px solid white
+
   }
   .container-fluid{
     margin-top:25px;
     /* position: fixed; */
+  }
+  .tabs{
+    margin-left:50px;
+  }
+  .img{
+    margin-left:60px;
   }
 
