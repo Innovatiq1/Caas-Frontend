@@ -8,6 +8,7 @@ import { ProfileDashboardComponent } from './modules/student/profile-dashboard/p
 import { HomeLandingpageComponent } from './modules/student/home-landingpage/home-landingpage.component';
 import { CoursesListComponent } from './modules/student/courses-list/courses-list.component';
 import { NetworkComponent } from './modules/student/network/network.component';
+import { PaymentComponent } from './modules/student/payment/payment.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'profile', component: ProfileDashboardComponent},
   { path: 'landing', component: HomeLandingpageComponent},
   { path: 'courses', component: CoursesListComponent},
-  { path: 'network', component: NetworkComponent}
+  { path: 'network', component: NetworkComponent},
+  { path: 'payment', component: PaymentComponent}
 
 
 ];

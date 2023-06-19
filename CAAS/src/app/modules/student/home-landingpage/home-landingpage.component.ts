@@ -22,8 +22,12 @@ export class HomeLandingpageComponent implements OnInit {
     }
   }
   navigateTo(route : string){
-    this.router.navigate(['/profile'])
-  }
+    if(route == 'profile'){
+      this.router.navigate(['/profile'])
+      } else if(route == 'courses'){
+        this.router.navigate(['/courses'])
+      }
+    }
   ngOnInit(){
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {

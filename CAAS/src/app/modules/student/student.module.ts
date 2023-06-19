@@ -12,6 +12,7 @@ import { ProfileDashboardComponent } from './profile-dashboard/profile-dashboard
 import { HomeLandingpageComponent } from './home-landingpage/home-landingpage.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { NetworkComponent } from './network/network.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const route: Routes = [
   // {
@@ -33,7 +34,8 @@ const route: Routes = [
     ProfileDashboardComponent,
     HomeLandingpageComponent,
     CoursesListComponent,
-    NetworkComponent
+    NetworkComponent,
+    PaymentComponent
 
   ],
   imports: [

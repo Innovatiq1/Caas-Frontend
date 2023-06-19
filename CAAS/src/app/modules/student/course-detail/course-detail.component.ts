@@ -35,10 +35,12 @@ export class CourseDetailComponent {
   
   }
   navigate(){
-    // let email=localStorage.getItem('email');
-    // if(!email){
+    let email=localStorage.getItem('email');
+    if(!email){
         this.router.navigate(['/login']);
-    // }
+    } else {
+      this.router.navigate(['/payment']);
+    }
   }
   ngOnInit(){
     this.router.events.subscribe((event) => {
