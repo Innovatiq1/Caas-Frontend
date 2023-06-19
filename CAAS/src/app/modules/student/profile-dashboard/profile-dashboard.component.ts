@@ -11,7 +11,12 @@ export class ProfileDashboardComponent {
 
   constructor(private router: Router) {}
   navigateTo(route : string){
-    this.router.navigate(['profile', route])
+    if(route == 'profile'){
+    this.router.navigate(['/profile'])
+    } else if(route == 'courses'){
+      this.router.navigate(['/courses'])
+
+    }
   }
 
 }

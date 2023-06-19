@@ -1,30 +1,33 @@
 ​<div class="container">
     <!-- Header -->
-    <div class="header">
-        <div class="title">
-            <img src="assets/images/caas-img.png" alt="logo" class="logo">
-            <div class="vertical-line"></div>
-            <h1>Training<br>Institute</h1>
+    <header>
+        <!-- Header content -->
+        <div class="header">
+            <div class="title">
+                <img src="/assets/images/caas-img.png" alt="logo" class="logo">
+                <div class="vertical-line"></div>
+                <h1>Training<br>Institute</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <button class="search-button"><mat-icon>search</mat-icon></button>
+            </div>
+            <div class="profile-container">
+                <h4 class="profile-name">Jhonny Daniel</h4>
+                <img src="../../../../assets/images/Profile.png" alt="Profile Image" class="profile-img">
+            </div>
         </div>
-        <div class="search-container">
-            <input type="text" placeholder="Search..." class="search-input">
-            <button class="search-button"><mat-icon>search</mat-icon></button>
-        </div>
-        <div class="profile-container">
-            <h4 class="profile-name">Jhonny Daniel</h4>
-            <img src="assets/images/Profile.png" alt="profile Image" class="profile-img">
-        </div>
-    </div>
+    </header>
     <!-- Header Ends -->
     <div class="content">
         <!-- sidebar -->
         <section class="sidebar">
             <div class="sidebar-content">
                 <ul>
-                    <li><a href="Profile"
-                            (click)="navigateTo('Profile')"><mat-icon>people</mat-icon><span>Profile</span></a></li>
-                    <li><a href="Courses"
-                            (click)="navigateTo('Courses')"><mat-icon>school</mat-icon><span>Courses</span></a></li>
+                    <li><a 
+                            (click)="navigateTo('profile')"><mat-icon>people</mat-icon><span>Profile</span></a></li>
+                    <li><a
+                            (click)="navigateTo('courses')"><mat-icon>school</mat-icon><span>Courses</span></a></li>
                     <li><a href="Schedule"
                             (click)="navigateTo('Schedule')"><mat-icon>schedule</mat-icon><span>Schedule</span></a></li>
                     <li><a href="Survey"
@@ -54,7 +57,7 @@
                 </p>
                 <div class="edit-icon"><mat-icon>edit</mat-icon></div>
                 <div>
-                    <img src="assets/images/profile" alt="">
+                    <img src="assets/images/Profile.png" alt="">
                 </div>
                 <div>
                     <p class="edit-image">edit image</p>

@@ -82,5 +82,25 @@
   width: 60%;
   float: right;
 }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.first-line {
+  font-weight: bold;
+}
+
+.second-line {
+  font-weight: lighter;
+}
+
+.right-content {
+  text-align: right;
+}
+
 
   

@@ -24,7 +24,7 @@ export class LoginComponent {
   onSubmit(){
     if(this.loginForm.valid){
       localStorage.setItem('email',this.loginForm.value.email);
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/landing']);
 
     }
     else{

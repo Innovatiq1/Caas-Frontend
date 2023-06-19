@@ -10,6 +10,7 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ProfileDashboardComponent } from './profile-dashboard/profile-dashboard.component';
 import { HomeLandingpageComponent } from './home-landingpage/home-landingpage.component';
+import { CoursesListComponent } from './courses-list/courses-list.component';
 
 const route: Routes = [
   // {
@@ -29,7 +30,8 @@ const route: Routes = [
     HeaderComponent,
     CourseDetailComponent,
     ProfileDashboardComponent,
-    HomeLandingpageComponent
+    HomeLandingpageComponent,
+    CoursesListComponent
 
   ],
   imports: [
