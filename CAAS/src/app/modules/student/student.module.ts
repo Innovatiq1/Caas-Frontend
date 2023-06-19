@@ -8,6 +8,8 @@ import { HomeContentComponent } from './home/home-content/home-content/home-cont
 import { HeaderComponent } from './common/header/header.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ProfileDashboardComponent } from './profile-dashboard/profile-dashboard.component';
+import { HomeLandingpageComponent } from './home-landingpage/home-landingpage.component';
 
 const route: Routes = [
   // {
@@ -26,6 +28,8 @@ const route: Routes = [
     HomeContentComponent,
     HeaderComponent,
     CourseDetailComponent,
+    ProfileDashboardComponent,
+    HomeLandingpageComponent
 
   ],
   imports: [
