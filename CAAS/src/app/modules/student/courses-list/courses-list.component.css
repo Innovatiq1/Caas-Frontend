@@ -146,9 +146,6 @@
   max-width: 500px;
   margin-bottom:30px;
 }
-.title{
-  margin-left:50px;
-}
 .cimg{
   height:30%
 }
@@ -363,7 +360,7 @@
     position: absolute;
     transition: all 0.3s linear;
     width: 15px;
-    margin-left: 10px;
+    margin-left: 15px;
     background-color: rgb(44, 88, 163);
     padding: 20px;
     border-radius: 10px;
