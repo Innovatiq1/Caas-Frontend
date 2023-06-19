@@ -39,8 +39,7 @@ export class CourseDetailComponent {
     if(!email){
         this.router.navigate(['/login']);
     } else {
-      this.router.navigate(['/profile']);
-
+      this.router.navigate(['/payment']);
     }
   }
   ngOnInit(){

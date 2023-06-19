@@ -11,6 +11,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ProfileDashboardComponent } from './profile-dashboard/profile-dashboard.component';
 import { HomeLandingpageComponent } from './home-landingpage/home-landingpage.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const route: Routes = [
   // {
@@ -31,7 +32,8 @@ const route: Routes = [
     CourseDetailComponent,
     ProfileDashboardComponent,
     HomeLandingpageComponent,
-    CoursesListComponent
+    CoursesListComponent,
+    PaymentComponent
 
   ],
   imports: [

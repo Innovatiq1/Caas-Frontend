@@ -1,0 +1,67 @@
+<div class="container"><br>
+<header>
+    <!-- Header content -->
+    <div class="header">
+        <div class="title">
+            <img src="/assets/images/caaslogo.png" alt="logo" >
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button class="search-button"><mat-icon>search</mat-icon></button>
+        </div>
+        <div class="profile-container">
+            <h4 class="profile-name">Jhonny Daniel</h4>
+            <img src="../../../../assets/images/Profile.png" alt="Profile Image" class="profile-img">
+        </div>
+    </div>
+</header>
+
+  
+  <mat-stepper linear #stepper class="stepper">
+    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Order & Review Details</ng-template>
+        <div class="flex">
+        <img class="img" src="/assets/images/course1.png">
+        <div class="col">
+
+        <h2  class="titlefont">Personnel Licensing for Regulators</h2>
+        <div class="flex">
+
+        <span class="spantxt">2 Months</span>
+        <span class="spantxt">560 Learners</span>
+</div>
+        </div>
+    </div><br>
+    <h2 class="h2text">Order Details</h2>
+    <h2 class="h2title">Personnel Licensing for Regulators</h2>
+    <img class="payment" src="../../../../assets/images/payment.png">
+        <div>
+          <button class="pbtn" matStepperNext>Pay Now</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [editable]="isEditable">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Payment Method</ng-template>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>
