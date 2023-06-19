@@ -1,11 +1,9 @@
 <div class="container">
-    <header>
+    <header><br>
         <!-- Header content -->
         <div class="header">
             <div class="title">
-                <img src="/assets/images/caas-img.png" alt="logo" class="logo">
-                <div class="vertical-line"></div>
-                <h1>Training<br>Institute</h1>
+                <img src="/assets/images/caaslogo.png" alt="logo" class="logo">
             </div>
             <div class="search-container">
                 <input type="text" placeholder="Search..." class="search-input">
@@ -19,14 +17,13 @@
     </header>
 
     <main>
-        <br>
         <section class="sidebar">
             <div class="sidebar-content">
                 <ul>
                     <li><a 
                             (click)="navigateTo('profile')"><mat-icon>people</mat-icon><span>Profile</span></a></li>
-                    <li><a href="Courses"
-                            (click)="navigateTo('Courses')"><mat-icon>school</mat-icon><span>Courses</span></a></li>
+                    <li><a 
+                            (click)="navigateTo('courses')"><mat-icon>school</mat-icon><span>Courses</span></a></li>
                     <li><a href="Schedule"
                             (click)="navigateTo('Schedule')"><mat-icon>schedule</mat-icon><span>Schedule</span></a></li>
                     <li><a href="Survey"
@@ -40,26 +37,57 @@
                 </ul>
             </div>
         </section>
-
-
-        
-
-
         
     </main>
-
-    <footer>
-        ​<div class="footer">
-            <div>
-                <p><span class="first-line">© 2023 Educational Training Institute. All rights reserved.</span><br><span
-                        class="second-line">Terms of services private policy</span></p>
+    <div class="sub-container">
+        <br>
+        <h2 class="fecourse">Featured Courses by CAAS</h2>
+        <div class="carouse-container">
+        <div class="image-slider">
+          <button class="slider-btn" (click)="showPreviousImages()" [hidden]="isFirstPage()"><span class="lt">&lt;</span></button>
+          <div class="slider">
+            <div  class="images-container" *ngFor="let image of visibleImages; let i = index">
+              <img  class="carousel"(click)="openCourse('featured-course')" [src]="image.src" [alt]="image.alt">
+              <h2 class="titletexts" (click)="openCourse('featured-course')">{{image.title}}</h2>
+              <span class="content-texts">{{ image.text }}</span>
+              <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
+              <!-- <button class="learnbtn" type="button"><b>Learn More</b></button> -->
             </div>
-
-            <div class="right-content">
-                <p>Powered by Innovatiq</p>
-            </div>
+          </div>
+          <button class="slider-btn" (click)="showNextImages()" [hidden]="isLastPage()"><span class="lt">&gt;</span></button>
         </div>
+        
+      </div>
+      <h2 class="fecourse">Stackable Programmes by CAAS</h2>
+      <div class="carouse-container">
+        <div class="image-slider">
+          <button class="slider-btn" (click)="showPreviousStack()" [hidden]="isFirst()"><span class="lt">&lt;</span></button>
+          <div class="slider">
+            <div  class="images-container" *ngFor="let image of stackableImages; let i = index">
+              <img class="carousel" (click)="openCourse('stackable-course')"  [src]="image.src">
+              <h2 class="title-stack">{{image.title}}</h2>
+              <p>{{ image.text }}</p>
+              <button class="sbtn"(click)="openCourse('stackable-course')" ><b>Learn More</b></button>
+    
+            </div>
+          </div>
+          <button class="slider-btn" (click)="showNextStack()" [hidden]="isLast()"><span class="lt">&gt;</span></button>
+        </div>
+        
+      </div>
+    <br><br>
+    <footer>
+      ​<div class="footer">
+          <div>
+              <p><span class="first-line">© 2023 CAAS. All rights reserved.</span><br><span
+                      class="second-line">Terms of services private policy</span></p>
+          </div>
+    
+          <div class="right-content">
+              <p>Powered by Innovatiq</p>
+          </div>
+      </div>
     </footer>
-
+    </div>
 
 </div>
