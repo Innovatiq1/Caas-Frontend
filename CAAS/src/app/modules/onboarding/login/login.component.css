@@ -1,18 +1,29 @@
+.pimg{
+  max-width: 30%;
+  margin-left:15px;
+  margin-top:40px;
+    }
+  
 .left-half {
-    width: 50%;
+    width: 70%;
     float: left;
   }
+
   
   .right-half {
-    width: 50%;
+    width: 30%;
     float: right;
   }
   .img{
-    width:100%
+    /* width:100%; */
+    margin-top:40px;
+    height:100%;
+    width:100%;
+    /* margin-left:90px; */
   }
   .wel{
-margin-top:80px;
-margin-left:220px;
+margin-top:50px;
+margin-left:50px;
 font-size: 40px;  }
 .gimg{
     width:20px;
@@ -25,7 +36,7 @@ font-size: 40px;  }
   background-color: brown;
 } */
 .gbtn{
-  margin-left:220px;
+  margin-left:50px;
   background-color: rgb(72, 72, 119);
   color: white;
   padding:7px 60px 7px 40px;
@@ -39,13 +50,13 @@ font-size: 40px;  }
   color: white;
 }
 .ortext{
-  margin-left:230px
+  margin-left:50px
 }
 .field{
-  margin-left:250px;
+  margin-left:50px;
 }
 .btn{
-  margin-left:300px;
+  margin-left:100px;
   border-radius: 25px;
   background-color: rgb(72, 72, 119);
   color: white;
@@ -58,17 +69,17 @@ font-size: 40px;  }
 
 }
 .fpswrd{
-  margin-left:330px;
+  margin-left:120px;
   color:palevioletred
 }
 .signuptext{
-  margin-left:250px;
+  margin-left:50px;
 }
 .signup{
   color:palevioletred
 
 }
 .verimg{
-  margin-left:250px;
+  margin-left:50px;
 }
 
