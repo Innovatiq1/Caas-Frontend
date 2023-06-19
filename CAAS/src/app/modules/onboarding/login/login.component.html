@@ -5,17 +5,17 @@
   <div class="right-half">
     <h1 class="wel">Welcome Back</h1>
     <button  class="gbtn" ><b class="lgbtn">Login with Singpass</b></button><br><br>
-                <span class="ortext">_______________OR_________________</span><br><br>
+                <span class="ortext">__________________OR_________________</span><br><br>
 <form [formGroup]="loginForm">
   <div class="form_group">
     <mat-form-field class="field"appearance="outline">
-      <input matInput formControlName="email" placeholder="Email ID">
+      <input matInput formControlName="email"  placeholder="Email ID">
   </mat-form-field>
   <mat-error *ngIf="isSubmitted"class="field">{{utils.getErrorMessage(loginForm, "email")?.message}}</mat-error>
 </div>
 <div class="form_group">
   <mat-form-field class="field"appearance="outline">
-    <input matInput formControlName="password" placeholder="Password">
+    <input matInput  type="password" formControlName="password" placeholder="Password">
 </mat-form-field>
 <mat-error *ngIf="isSubmitted" class="field">{{utils.getErrorMessage(loginForm, "password")?.message}}</mat-error>
 </div>
