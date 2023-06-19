@@ -412,6 +412,40 @@
     border: none;
     cursor: pointer;
 }
+.create-group{
+    font-size: smaller;
+    margin-left: 244px;
+    margin-top: -28px;
+}
+.social-work{
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+.social-name{
+    font-size: 20px;
+    margin-left: 120px;
+    margin-top: -102px;
+}
+.social-name p{
+    font-weight: lighter;
+    font-size: small;
+    color: gray;
+}
+.public1{
+    margin-left: 116px;
+    margin-top: -38px;
+    color: gray;
+
+}
+.chat-img{
+    height: 400px;
+    width: 350px;
+    border-radius: 30px;
+
+}
 
 .chat{
     width: 350px;
