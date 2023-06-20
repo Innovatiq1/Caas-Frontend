@@ -8,6 +8,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 
 export class ProfileDashboardComponent {
+  isDropdownOpen = false;
 
   constructor(private router: Router) {}
   navigateTo(route : string){
@@ -18,11 +19,19 @@ export class ProfileDashboardComponent {
     } else if(route == 'network'){
       this.router.navigate(['/network'])
     }
+    else if(route == 'settings'){
+      localStorage.clear();
+      this.router.navigate(['/home'])
+      }
   }
   logout(){
     localStorage.clear();
     this.router.navigate(['/home'])
   
+  }
+  toggleDropdown() {
+    debugger
+    this.isDropdownOpen = true;
   }
   
 

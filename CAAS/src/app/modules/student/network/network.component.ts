@@ -18,6 +18,11 @@ export class NetworkComponent {
       this.router.navigate(['/network'])
 
     }
+    else if(route == 'settings'){
+      localStorage.clear();
+      this.router.navigate(['/home'])
+      }
+
   }
   logout(){
     localStorage.clear();

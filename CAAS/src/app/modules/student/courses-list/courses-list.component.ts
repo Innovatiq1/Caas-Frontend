@@ -48,6 +48,11 @@ myCourseImages: MyCourse[] = [];
       this.router.navigate(['/network'])
 
     }
+    else if(route == 'settings'){
+      localStorage.clear();
+      this.router.navigate(['/home'])
+      }
+
   }
   currentIndex = 0;
 stackIndex = 0;

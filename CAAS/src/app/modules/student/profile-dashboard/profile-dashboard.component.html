@@ -12,14 +12,23 @@
             </div>
             <div class="profile-container">
                 <h4 class="profile-name">Jhonny Daniel</h4>
-                <div class="dropdown">
+                <!-- <div class="dropdown">
                     <img src="../../../../assets/images/Profile.png" alt="Profile Image" class="profile-img">
                     <div class="dropdown-content">
                         <a href="#">Dashboard</a><br>
                         <a href="#" (click)="logout()">Logout</a>
                       </div>
                     </div>
-                </div>
+                </div> -->
+                <div class="dropdown" (click)="toggleDropdown()">
+                    <img src="../../../../assets/images/Profile.png" alt="Profile Image" class="profile-img">
+                    <div class="dropdown-content" [ngClass]="{ 'open': isDropdownOpen }">
+                      <a href="#">Dashboard</a><br>
+                      <a href="#" (click)="logout()">Logout</a>
+                    </div>
+                  </div>
+                                  </div>
+
         </div>
     </header>
     <!-- Header Ends -->
@@ -40,8 +49,8 @@
                     <li><a 
                             (click)="navigateTo('network')"><mat-icon>people</mat-icon><span>Network</span></a></li>
                     <li><a href="Chat" (click)="navigateTo('Chat')"><mat-icon>chat</mat-icon><span>Chat</span></a></li>
-                    <li><a href="Settings"
-                            (click)="navigateTo('Settings')"><mat-icon>settings</mat-icon><span>Settings</span></a></li>
+                    <li><a 
+                            (click)="navigateTo('settings')"><mat-icon>settings</mat-icon><span>Settings</span></a></li>
                 </ul>
             </div>
         </section>

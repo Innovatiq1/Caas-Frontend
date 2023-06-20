@@ -29,6 +29,11 @@ export class HomeLandingpageComponent implements OnInit {
       } else if(route == 'network'){
         this.router.navigate(['/network'])
       }
+      else if(route == 'settings'){
+        localStorage.clear();
+        this.router.navigate(['/home'])
+        }
+  
     }
     logout(){
       localStorage.clear();

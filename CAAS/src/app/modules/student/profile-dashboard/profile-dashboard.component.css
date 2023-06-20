@@ -420,7 +420,7 @@ ul li a:hover span {
     position: relative;
     display: inline-block;
   }
-
+  
   .dropdown-content {
     display: none;
     position: absolute;
@@ -430,7 +430,7 @@ ul li a:hover span {
     z-index: 1;
     left: -160px; /* Position the dropdown on the left side */
   }
-
-  .dropdown:hover .dropdown-content {
+  
+  .dropdown.open .dropdown-content {
     display: block;
   }
