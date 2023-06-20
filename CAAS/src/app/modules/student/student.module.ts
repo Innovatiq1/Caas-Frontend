@@ -37,7 +37,8 @@ const route: Routes = [
     CoursesListComponent,
     NetworkComponent,
     PaymentComponent,
-    ApplicationDialogComponent
+    ApplicationDialogComponent,
+    
 
   ],
   imports: [

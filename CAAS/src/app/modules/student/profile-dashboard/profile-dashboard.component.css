@@ -1,7 +1,5 @@
-​.container {
-    
-   
-}
+​.container {}
+
 .logo {
     height: 40px;
     margin-right: 10px;
@@ -25,7 +23,7 @@
 .title {
     display: flex;
     align-items: center;
-    
+
 }
 
 .vertical-line {
@@ -194,16 +192,74 @@ ul li a:hover span {
     transition: border-color 0.3s, box-shadow 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-.profile-icon{
+
+.profile-icon {
     height: 120px;
     width: 120px;
     border-radius: 50%;
 }
+
 .name-line {
     font-weight: bold;
     font-size: 15px;
 
 }
+
+.profile-container {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    margin-top: 10px;
+
+}
+
+
+.dropdown-content {
+    position: absolute;
+    width: 244px;
+    height: 250.41px;
+    margin-left: -80px;
+    top: 30.92px;
+    background: #FDFCFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 21px;
+}
+
+.dropdown-content li {
+    list-style: none;
+    font-size: 25px;
+    line-height: 1.5;
+    margin-left: 40px;
+    letter-spacing: 1px;
+    align-items: center;
+}
+
+.dropdown-content li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.profile-container a {
+    display: inline-block;
+}
+
+.profile-container a:hover {
+    opacity: 0.7;
+}
+
+
 
 .welcome-line {
     font-weight: lighter;
@@ -378,7 +434,7 @@ ul li a:hover span {
 
 }
 
-.trainerstofollow{
+.trainerstofollow {
     width: 374px;
     height: 144px;
     color: black;
@@ -393,7 +449,7 @@ ul li a:hover span {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.trainerstofollow-img{
+.trainerstofollow-img {
     margin-left: 760px;
     width: 374px;
     height: 157px;
@@ -401,6 +457,7 @@ ul li a:hover span {
     margin-top: -172px;
     position: absolute;
 }
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -420,21 +477,23 @@ ul li a:hover span {
 .right-content {
     text-align: right;
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    left: -160px; /* Position the dropdown on the left side */
-  }
-  
-  .dropdown.open .dropdown-content {
+    left: -160px;
+    /* Position the dropdown on the left side */
+}
+
+.dropdown.open .dropdown-content {
     display: block;
-  }
+}

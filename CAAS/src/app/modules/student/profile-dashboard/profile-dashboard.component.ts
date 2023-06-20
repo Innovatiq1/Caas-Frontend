@@ -8,31 +8,30 @@ import { Router, RouterModule } from '@angular/router';
 })
 
 export class ProfileDashboardComponent {
-  isDropdownOpen = false;
+  // isDropdownOpen = false;
 
-  constructor(private router: Router) {}
-  navigateTo(route : string){
-    if(route == 'profile'){
-    this.router.navigate(['/profile'])
-    } else if(route == 'courses'){
+  constructor(private router: Router) { }
+  navigateTo(route: string) {
+    if (route == 'profile') {
+      this.router.navigate(['/profile'])
+    } else if (route == 'courses') {
       this.router.navigate(['/courses'])
-    } else if(route == 'network'){
+    } else if (route == 'network') {
       this.router.navigate(['/network'])
     }
-    else if(route == 'settings'){
-      localStorage.clear();
-      this.router.navigate(['/home'])
-      }
+    // else if (route == 'logout') {
+      // localStorage.clear();
+      // this.router.navigate(['/home'])
+    // }
   }
-  logout(){
+  logout() {
     localStorage.clear();
     this.router.navigate(['/home'])
-  
   }
-  toggleDropdown() {
-    debugger
-    this.isDropdownOpen = true;
-  }
-  
+  // toggleDropdown() {
+  //   debugger
+  //   this.isDropdownOpen = true;
+  // }
+
 
 }

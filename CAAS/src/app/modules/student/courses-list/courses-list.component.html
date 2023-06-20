@@ -1,158 +1,162 @@
 <div class="container">
-    <header><br>
-        <!-- Header content -->
-        <div class="header">
-            <div class="title">
-                <img src="/assets/images/caaslogo.png" alt="logo">
-            </div>
-            <div class="search-container">
-                <input type="text" placeholder="Search..." class="search-input">
-                <button class="search-button"><mat-icon>search</mat-icon></button>
-            </div>
-            <div class="profile-container">
-                <h4 class="profile-name">Jhonny Daniel</h4>
-                <div class="dropdown">
-                <img src="../../../../assets/images/Profile.png" alt="Profile Image" class="profile-img">
-                <div class="dropdown-content">
-                    <a href="#">Dashboard</a><br>
-                    <a href="#" (click)="logout()">Logout</a>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section class="sidebar">
-            <div class="sidebar-content">
-                <ul>
-                    <li><a 
-                            (click)="navigateTo('profile')"><mat-icon>people</mat-icon><span>Profile</span></a></li>
-                    <li><a 
-                            (click)="navigateTo('courses')"><mat-icon>school</mat-icon><span>Courses</span></a></li>
-                    <li><a href="Schedule"
-                            (click)="navigateTo('Schedule')"><mat-icon>schedule</mat-icon><span>Schedule</span></a></li>
-                    <li><a href="Survey"
-                            (click)="navigateTo('Survey')"><mat-icon>my_library_books</mat-icon><span>Survey</span></a>
-                    </li>
-                    <li><a
-                            (click)="navigateTo('network')"><mat-icon>people</mat-icon><span>Network</span></a></li>
-                    <li><a href="Chat" (click)="navigateTo('Chat')"><mat-icon>chat</mat-icon><span>Chat</span></a></li>
-                    <li><a 
-                            (click)="navigateTo('settings')"><mat-icon>settings</mat-icon><span>Settings</span></a></li>
-                </ul>
-            </div>
-        </section>
-        
-    </main>
-    <div class="sub-container">
-        <br>
-        <h2 class="fecourse">My Courses in Progress</h2>
-        <!-- <h4 class="nocourse">No Courses in Progress</h4> -->
-        <div class="carouse-container">
-
-            <div class="image-slider">
-              <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
-              <div class="slider">
-                <div  class="images-container" *ngFor="let image of myInprogressCourses; let i = index">
-                  <img  class="carousel"[src]="image.src" [alt]="image.alt">
-                  <h2 class="titletexts" >{{image.title}}</h2>
-                  <span class="content-texts">{{ image.text }}</span>
-                  <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
-                  <!-- <a href="../../../../assets/course.pdf" target="_blank" class="abtn" ><b>Download</b></a> -->
-    
-                </div>
-              </div>
-              <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
-            </div>
-            
-          </div>
-    
-
-
-        <br><br>
-        <h2 class="fecourse">My Pending Courses</h2>
-        <!-- <h4 class="nocourse">No Pending Courses</h4><br><br> -->
-        <div class="carouse-container">
-
-            <div class="image-slider">
-              <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
-              <div class="slider">
-                <div  class="images-container" *ngFor="let image of myPendingCourses; let i = index">
-                  <img  class="carousel" [src]="image.src" [alt]="image.alt">
-                  <h2 class="titletexts" >{{image.title}}</h2>
-                  <span class="content-texts">{{ image.text }}</span>
-                  <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
-                  <!-- <a href="../../../../assets/course.pdf" target="_blank" class="abtn" ><b>Download</b></a> -->
-    
-                </div>
-              </div>
-              <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
-            </div>
-            
-          </div>
-    
-<br><br>
-
-
-        <h2 class="fecourse">Featured Courses by CAAS</h2>
-        <div class="carouse-container">
-        <div class="image-slider">
-          <button class="slider-btn" (click)="showPreviousImages()" [hidden]="isFirstPage()"><span class="lt">&lt;</span></button>
-          <div class="slider">
-            <div  class="images-container" *ngFor="let image of visibleImages; let i = index">
-              <img  class="carousel"(click)="openCourse('featured-course')" [src]="image.src" [alt]="image.alt">
-              <h2 class="titletexts" (click)="openCourse('featured-course')">{{image.title}}</h2>
-              <span class="content-texts">{{ image.text }}</span>
-              <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
-              <!-- <button class="learnbtn" type="button"><b>Learn More</b></button> -->
-            </div>
-          </div>
-          <button class="slider-btn" (click)="showNextImages()" [hidden]="isLastPage()"><span class="lt">&gt;</span></button>
-        </div>
-        
-      </div><br>
-      <h2 class="fecourse">Diploma Programmes by CAAS</h2>
-      <div class="carouse-container">
-        <div class="image-slider">
-          <button class="slider-btn" (click)="showPreviousStack()" [hidden]="isFirst()"><span class="lt">&lt;</span></button>
-          <div class="slider">
-            <div  class="images-container" *ngFor="let image of stackableImages; let i = index">
-              <img class="carousel" (click)="openCourse('stackable-course')"  [src]="image.src">
-              <h2 class="title-stack">{{image.title}}</h2>
-              <p>{{ image.text }}</p>
-              <button class="sbtn"(click)="openCourse('stackable-course')" ><b>Learn More</b></button>
-    
-            </div>
-          </div>
-          <button class="slider-btn" (click)="showNextStack()" [hidden]="isLast()"><span class="lt">&gt;</span></button>
-        </div>
-        
+  <header><br>
+    <!-- Header content -->
+    <div class="header">
+      <div class="title">
+        <img src="/assets/images/caaslogo.png" alt="logo">
       </div>
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-input">
+        <button class="search-button"><mat-icon>search</mat-icon></button>
+      </div>
+      <div class="profile-container">
+        <h4 class="profile-name">Johnny Daniel</h4>
+        <div class="dropdown">
+            <img src="../../../../assets/images/profile-icon.png" alt="Profile Image" class="profile-img">
+            <ul class="dropdown-content">
+                <li>
+                    <a >Dashboard</a>
+                    <a >Profile</a>
+                    <a >Account</a>
+                    <a >Rewards</a>
+                    <a href="#" (click)="logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="sidebar">
+      <div class="sidebar-content">
+        <ul>
+          <li><a (click)="navigateTo('profile')"><mat-icon>people</mat-icon><span>Profile</span></a></li>
+          <li><a (click)="navigateTo('courses')"><mat-icon>school</mat-icon><span>Courses</span></a></li>
+          <li><a href="Schedule" (click)="navigateTo('Schedule')"><mat-icon>schedule</mat-icon><span>Schedule</span></a>
+          </li>
+          <li><a href="Survey"
+              (click)="navigateTo('Survey')"><mat-icon>my_library_books</mat-icon><span>Survey</span></a>
+          </li>
+          <li><a (click)="navigateTo('network')"><mat-icon>people</mat-icon><span>Network</span></a></li>
+          <li><a href="Chat" (click)="navigateTo('Chat')"><mat-icon>chat</mat-icon><span>Chat</span></a></li>
+          <li><a (click)="navigateTo('settings')"><mat-icon>settings</mat-icon><span>Settings</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+  <div class="sub-container">
+    <br>
+    <h2 class="fecourse">My Courses in Progress</h2>
+    <!-- <h4 class="nocourse">No Courses in Progress</h4> -->
+    <div class="carouse-container">
+
+      <div class="image-slider">
+        <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
+        <div class="slider">
+          <div class="images-container" *ngFor="let image of myInprogressCourses; let i = index">
+            <img class="carousel" [src]="image.src" [alt]="image.alt">
+            <h2 class="titletexts">{{image.title}}</h2>
+            <span class="content-texts">{{ image.text }}</span>
+            <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
+            <!-- <a href="../../../../assets/course.pdf" target="_blank" class="abtn" ><b>Download</b></a> -->
+
+          </div>
+        </div>
+        <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
+      </div>
+
+    </div>
+
+
+
+    <br><br>
+    <h2 class="fecourse">My Pending Courses</h2>
+    <!-- <h4 class="nocourse">No Pending Courses</h4><br><br> -->
+    <div class="carouse-container">
+
+      <div class="image-slider">
+        <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
+        <div class="slider">
+          <div class="images-container" *ngFor="let image of myPendingCourses; let i = index">
+            <img class="carousel" [src]="image.src" [alt]="image.alt">
+            <h2 class="titletexts">{{image.title}}</h2>
+            <span class="content-texts">{{ image.text }}</span>
+            <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
+            <!-- <a href="../../../../assets/course.pdf" target="_blank" class="abtn" ><b>Download</b></a> -->
+
+          </div>
+        </div>
+        <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
+      </div>
+
+    </div>
+
+    <br><br>
+
+
+    <h2 class="fecourse">Featured Courses by CAAS</h2>
+    <div class="carouse-container">
+      <div class="image-slider">
+        <button class="slider-btn" (click)="showPreviousImages()" [hidden]="isFirstPage()"><span
+            class="lt">&lt;</span></button>
+        <div class="slider">
+          <div class="images-container" *ngFor="let image of visibleImages; let i = index">
+            <img class="carousel" (click)="openCourse('featured-course')" [src]="image.src" [alt]="image.alt">
+            <h2 class="titletexts" (click)="openCourse('featured-course')">{{image.title}}</h2>
+            <span class="content-texts">{{ image.text }}</span>
+            <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
+            <!-- <button class="learnbtn" type="button"><b>Learn More</b></button> -->
+          </div>
+        </div>
+        <button class="slider-btn" (click)="showNextImages()" [hidden]="isLastPage()"><span
+            class="lt">&gt;</span></button>
+      </div>
+
+    </div><br>
+    <h2 class="fecourse">Diploma Programmes by CAAS</h2>
+    <div class="carouse-container">
+      <div class="image-slider">
+        <button class="slider-btn" (click)="showPreviousStack()" [hidden]="isFirst()"><span
+            class="lt">&lt;</span></button>
+        <div class="slider">
+          <div class="images-container" *ngFor="let image of stackableImages; let i = index">
+            <img class="carousel" (click)="openCourse('stackable-course')" [src]="image.src">
+            <h2 class="title-stack">{{image.title}}</h2>
+            <p>{{ image.text }}</p>
+            <button class="sbtn" (click)="openCourse('stackable-course')"><b>Learn More</b></button>
+
+          </div>
+        </div>
+        <button class="slider-btn" (click)="showNextStack()" [hidden]="isLast()"><span class="lt">&gt;</span></button>
+      </div>
+
+    </div>
     <br>
     <br>
     <h2 class="fecourse">My Courses Watchlist</h2>
     <div class="carouse-container">
 
-        <div class="image-slider">
-          <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
-          <div class="slider">
-            <div  class="images-container" *ngFor="let image of mywishlistCourses; let i = index">
-              <img  class="carousel"[src]="image.src" [alt]="image.alt">
-              <div class="flex">
-              <h2 class="titletexts" >{{image.title}}</h2>
+      <div class="image-slider">
+        <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
+        <div class="slider">
+          <div class="images-container" *ngFor="let image of mywishlistCourses; let i = index">
+            <img class="carousel" [src]="image.src" [alt]="image.alt">
+            <div class="flex">
+              <h2 class="titletexts">{{image.title}}</h2>
               <!-- <img class="wishlist" src="../../../../assets/images/wishlist.png"> -->
             </div>
-              <span class="content-texts">{{ image.text }}</span>
-              <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
-              <!-- <a href="../../../../assets/course.pdf" target="_blank" class="abtn" ><b>Download</b></a> -->
+            <span class="content-texts">{{ image.text }}</span>
+            <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
+            <!-- <a href="../../../../assets/course.pdf" target="_blank" class="abtn" ><b>Download</b></a> -->
 
-            </div>
           </div>
-          <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
         </div>
-        
+        <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
       </div>
+
+    </div>
 
     <!-- <h4 class="nocourse">No Courses in Watchlist</h4> -->
     <br>
@@ -160,38 +164,38 @@
     <!-- <h4 class="nocourse">No Completed Courses</h4> -->
     <div class="carouse-container">
 
-        <div class="image-slider">
-          <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
-          <div class="slider">
-            <div  class="images-container" *ngFor="let image of myCourses; let i = index">
-              <img  class="carousel" [src]="image.src" [alt]="image.alt">
-              <h2 class="titletexts" >{{image.title}}</h2>
-              <span class="content-texts">{{ image.text }}</span>
-              <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
-              <a href="../../../../assets/course.pdf" target="_blank" class="abtn" ><b>Download</b></a>
+      <div class="image-slider">
+        <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
+        <div class="slider">
+          <div class="images-container" *ngFor="let image of myCourses; let i = index">
+            <img class="carousel" [src]="image.src" [alt]="image.alt">
+            <h2 class="titletexts">{{image.title}}</h2>
+            <span class="content-texts">{{ image.text }}</span>
+            <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
+            <a href="../../../../assets/course.pdf" target="_blank" class="abtn"><b>Download</b></a>
 
-            </div>
           </div>
-          <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
         </div>
-        
+        <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
       </div>
+
+    </div>
 
 
 
 
     <footer>
       ​<div class="footer">
-          <div>
-              <p><span class="first-line">© 2023 CAAS. All rights reserved.</span><br><span
-                      class="second-line">Terms of services private policy</span></p>
-          </div>
-    
-          <div class="right-content">
-              <p>Powered by Innovatiq</p>
-          </div>
+        <div>
+          <p><span class="first-line">© 2023 CAAS. All rights reserved.</span><br><span class="second-line">Terms of
+              services private policy</span></p>
+        </div>
+
+        <div class="right-content">
+          <p>Powered by Innovatiq</p>
+        </div>
       </div>
     </footer>
-    </div>
+  </div>
 
 </div>

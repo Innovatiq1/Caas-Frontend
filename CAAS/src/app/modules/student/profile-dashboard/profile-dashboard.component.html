@@ -4,30 +4,27 @@
         <!-- Header content -->
         <div class="header">
             <div class="title">
-                <img src="/assets/images/caaslogo.png" alt="logo" >
+                <img src="/assets/images/caaslogo.png" alt="logo">
             </div>
             <div class="search-container">
                 <input type="text" placeholder="Search..." class="search-input">
                 <button class="search-button"><mat-icon>search</mat-icon></button>
             </div>
             <div class="profile-container">
-                <h4 class="profile-name">Jhonny Daniel</h4>
-                <!-- <div class="dropdown">
-                    <img src="../../../../assets/images/Profile.png" alt="Profile Image" class="profile-img">
-                    <div class="dropdown-content">
-                        <a href="#">Dashboard</a><br>
-                        <a href="#" (click)="logout()">Logout</a>
-                      </div>
-                    </div>
-                </div> -->
-                <div class="dropdown" (click)="toggleDropdown()">
+                <h4 class="profile-name">Johnny Daniel</h4>
+                <div class="dropdown">
                     <img src="../../../../assets/images/profile-icon.png" alt="Profile Image" class="profile-img">
-                    <div class="dropdown-content" [ngClass]="{ 'open': isDropdownOpen }">
-                      <a href="#">Dashboard</a><br>
-                      <a href="#" (click)="logout()">Logout</a>
-                    </div>
-                  </div>
-                                  </div>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a >Dashboard</a>
+                            <a >Profile</a>
+                            <a >Account</a>
+                            <a >Rewards</a>
+                            <a href="#" (click)="logout()">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
         </div>
     </header>
@@ -37,20 +34,16 @@
         <section class="sidebar">
             <div class="sidebar-content">
                 <ul>
-                    <li><a 
-                            (click)="navigateTo('profile')"><mat-icon>people</mat-icon><span>Profile</span></a></li>
-                    <li><a
-                            (click)="navigateTo('courses')"><mat-icon>school</mat-icon><span>Courses</span></a></li>
+                    <li><a (click)="navigateTo('profile')"><mat-icon>people</mat-icon><span>Profile</span></a></li>
+                    <li><a (click)="navigateTo('courses')"><mat-icon>school</mat-icon><span>Courses</span></a></li>
                     <li><a href="Schedule"
                             (click)="navigateTo('Schedule')"><mat-icon>schedule</mat-icon><span>Schedule</span></a></li>
                     <li><a href="Survey"
                             (click)="navigateTo('Survey')"><mat-icon>my_library_books</mat-icon><span>Survey</span></a>
                     </li>
-                    <li><a 
-                            (click)="navigateTo('network')"><mat-icon>people</mat-icon><span>Network</span></a></li>
+                    <li><a (click)="navigateTo('network')"><mat-icon>people</mat-icon><span>Network</span></a></li>
                     <li><a href="Chat" (click)="navigateTo('Chat')"><mat-icon>chat</mat-icon><span>Chat</span></a></li>
-                    <li><a 
-                            (click)="navigateTo('settings')"><mat-icon>settings</mat-icon><span>Settings</span></a></li>
+                    <li><a (click)="navigateTo('settings')"><mat-icon>settings</mat-icon><span>Settings</span></a></li>
                 </ul>
             </div>
         </section>
@@ -60,13 +53,13 @@
             </div>
             <div class="name-card">
                 <div>
-                    <p><span class="name-line">Hello Mr. Jhonny Daniel</span><br><span class="welcome-line">Welcome to
+                    <p><span class="name-line">Hello Johnny Daniel</span><br><span class="welcome-line">Welcome to
                             Training Board</span></p>
                 </div>
             </div>
             <div class="person-details">
-                <p><span>Jhonny Daniel</span><br>
-                    <span class="email">jhonnydaniel@gmail.com</span>
+                <p><span>Johnny Daniel</span><br>
+                    <span class="email">johnnydaniel@gmail.com</span>
                 </p>
                 <div class="edit-icon"><mat-icon>edit</mat-icon></div>
                 <div>
@@ -76,20 +69,17 @@
                     <p class="edit-image">edit image</p>
                 </div>
                 <p><span class="email">Company</span>
-                    <span class="name1"> Innovatiq</span>
+                    <span class="name1"> Boeing </span>
                 </p>
                 <p><span class="email">Department</span>
-                    <span class="name1"> Software</span>
+                    <span class="name1"> Aviation Safety</span>
                 </p>
                 <p><span class="email">Designation</span><br>
-                    <span class="ui-ux">UI/UX Designer</span>
+                    <span class="ui-ux">Aviation Safety Engineering</span>
                 </p>
                 <p><span class="email">Experience </span><br>
-                    <span>10 years in full Stack</span>
+                    <span>10 Years of Aviation Safety Engineering</span>
                 </p>
-                <!-- <p><span class="email">Address</span><br>
-                    <span class="name1">101 Marlo Street <br>Singapore 059020</span>
-                </p> -->
 
             </div>
             <div>
@@ -122,8 +112,8 @@
     <!-- Footer -->
     ​<div class="footer">
         <div>
-            <p><span class="first-line">© 2023 CAAS. All rights reserved.</span><br><span
-                    class="second-line">Terms of services private policy</span></p>
+            <p><span class="first-line">© 2023 CAAS. All rights reserved.</span><br><span class="second-line">Terms of
+                    services private policy</span></p>
         </div>
 
         <div class="right-content">
