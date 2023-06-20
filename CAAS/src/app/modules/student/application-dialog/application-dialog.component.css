@@ -1,0 +1,12 @@
+.mat-button{
+    background-color: cornflowerblue    ;
+}
+.mat-mdc-button  {
+position: absolute;
+    top: 50%;
+    height: 48px;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    color: blue;
+}

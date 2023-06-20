@@ -158,7 +158,7 @@ myInprogressCourses: MyCourse[] = [
   { src: '/assets/images/course2.png', alt: 'Image 2',text: '1 Month at 10 Hrs Per/Week',title:'Aeronautical Search and Rescue Operations',dates:'01 Jun - 30 Jun 2023'  },
   { src: '/assets/images/course3.png', alt: 'Image 3' ,text: '15 Days at 5-10 Hrs Per/Day',title:'Electronics Personnel Communications',dates:'19 Jun - 30 Jun 2023' },
   { src: '/assets/images/course6.png', alt: 'Image 6',text: '3 Months at 3-4 Hrs Per/Week',title:'ICAO PANS-OPS Instrument Procedures',dates:'01 Jun - 15 Oct 2023' },
-  { src: '/assets/images/course8.png', alt: 'Image 8',text: '4 Days at 3-4 Hrs Per/Day' ,title:'Aviation Security Programme in Public Policy',dates:'19 Jun - 23 Jun 2023' },
+  // { src: '/assets/images/course8.png', alt: 'Image 8',text: '4 Days at 3-4 Hrs Per/Day' ,title:'Aviation Security Programme in Public Policy',dates:'19 Jun - 23 Jun 2023' },
 ];
 myPendingCourses: MyCourse[] = [
   { src: '/assets/images/course1.png', alt: 'Image 1',text: '2 Months at 5-10 Hrs Per/Week',title:'Personnel Licensing for Regulators',dates:'19 Jun - 23 Aug 2023' },
