@@ -17,9 +17,13 @@
 </header>
 
   
-  <mat-stepper linear #stepper class="stepper">
-    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
-      <form [formGroup]="firstFormGroup">
+  <mat-stepper linear #stepper class="stepper" >
+    <!-- <mat-step  [editable]="isEditable">
+        <ng-template matStepLabel>Get Started</ng-template>
+
+</mat-step> -->
+    <mat-step  [editable]="isEditable">
+      <form >
         <ng-template matStepLabel>Order & Review Details</ng-template>
         <div class="flex">
         <img class="img" src="/assets/images/course1.png">
@@ -30,7 +34,18 @@
 
         <span class="spantxt">2 Months</span>
         <span class="spantxt">560 Learners</span>
+        <span class="spantxt">Intermediate</span>
+
+</div><br>
+<div class="flex">
+
+    <span class="span1txt">Best Seller</span>
+    <span class="span2txt">Updated Recently</span>
+
 </div>
+<h3 class="pricetxt">$200</h3>
+
+
         </div>
     </div><br>
     <h2 class="h2text">Order Details</h2>
@@ -42,26 +57,51 @@
       </form>
     </mat-step>
     <mat-step [editable]="isEditable">
-      <form [formGroup]="secondFormGroup">
         <ng-template matStepLabel>Payment Method</ng-template>
-        <mat-form-field>
-          <mat-label>Address</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                 required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
+        <h2 class="h2text">Payment Method</h2>
+        <h2 class="h2title">Personnel Licensing for Regulators</h2>
+        <h2 class="paytitle">Pay with Card</h2>
+        <h3 class="paytitle">Card information</h3>
+        <img class="cimg" src="../../../../assets/images/card.png">
+        <h3 class="paytitle">Name on card</h3>
+        <input type="text" class="card-input" placeholder="Johny Daniel"><br><br>
+        <h3 class="paytitle">Country or Region</h3>
+<select id="dropdown" class="card-input">
+  <option value="option1">Singapore</option>
+  <option value="option2"> India</option>
+</select>
+<br><br>
+<!-- <label for="checkbox">Checkbox:</label> -->
+<div class="flex">
+<input type="checkbox" class="check-input" id="checkbox" name="checkbox" value="checkbox">
+<div class="col">
+<h3 class="checktitle">Securely save my information for 1-click checkout</h3>
+<h3 class="checkingtitle">Pay faster on CAAS.COM and everywhere link is accepted.</h3>
+</div>
+
+</div>
+<br>
+<button class="cbtn" (click)="navigate()">Continue with Checkout</button>
     </mat-step>
-    <mat-step>
+    <!-- <mat-step>
       <ng-template matStepLabel>Done</ng-template>
       <p>You are now done.</p>
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button (click)="stepper.reset()">Reset</button>
       </div>
-    </mat-step>
+    </mat-step> -->
   </mat-stepper>
 </div>
+<footer>
+    ​<div class="footer">
+        <div>
+            <p><span class="first-line">© 2023 CAAS. All rights reserved.</span><br><span
+                    class="second-line">Terms of services private policy</span></p>
+        </div>
+
+        <div class="right-content">
+            <p>Powered by Innovatiq</p>
+        </div>
+    </div>
+</footer>

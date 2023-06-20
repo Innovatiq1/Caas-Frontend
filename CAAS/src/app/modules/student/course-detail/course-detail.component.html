@@ -1,7 +1,7 @@
 <!-- <div *ngIf="currentUrl == 'course-detail'">
     <app-header></app-header>
     </div> -->
-<div *ngIf = "featuredCourse" class="container">
+<div *ngIf = "!stackableCourse" class="container">
     <h2 class="texts">Personnel Licensing (PEL) for Regulators 
     </h2>
     <span>You will gain the fundamental knowledge required of Personnel Licensing (PEL) officers and inspectors.
@@ -40,8 +40,9 @@
       <br>
       <div class="flex">
       <button class="btn" ><b>Find Out More</b></button>
-      <button class="btn"  (click)="navigate()"><b>Apply Now</b></button>
-    </div>
+      <button class="btn" *ngIf="!params" (click)="navigate()"><b>Apply Now</b></button>
+      <button class="btn" *ngIf="params" ><b>Start Course</b></button>
+      </div>
 
 
       

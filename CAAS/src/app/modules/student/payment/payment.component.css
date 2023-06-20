@@ -111,6 +111,7 @@
 
 }
 
+
 .sidebar {
     position: absolute;
     transition: all 0.3s linear;
@@ -170,15 +171,63 @@ ul li a:hover span {
   }
 .spantxt{
     margin-left:50px;
+    color:grey
+}
+.span1txt{
+    margin-left:50px;
+    background-color: burlywood;
+}
+.pricetxt{
+    margin-left:600px;
+    font-size: 30px;;
+}
+.span2txt{
+    margin-left:50px;
+    background-color: skyblue;
 }
 .h2text{
-    margin-left:600px;
+    margin-left:580px;
     font-size:30px;
 }
 .h2title{
     margin-left:500px;
     font-size:25px;
 }
+.cimg{
+    margin-left:390px;
+    max-width:42%
+}
+.paytitle{
+    margin-left:400px;
+    font-size:25px;
+}
+.checktitle{
+    margin-left:5px;
+    font-size:20px;
+}
+.checkingtitle{
+    margin-left:5px;
+    font-size:20px;
+    color:grey;
+}
+
+.card-input{
+    margin-left:400px;
+    font-size:25px;
+    width:40%;
+    border-radius:5px;
+    border:1px solid grey;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+.check-input{
+    margin-left:400px;
+    border:1px solid grey;
+    width: 20px;;
+
+}
+
+
 .payment{
     margin-left:200px;
 }
@@ -192,3 +241,30 @@ ul li a:hover span {
     font-family:sans-serif;
     border:1px solid white
   }
+  .cbtn{
+    border-radius: 25px;
+    background-color: rgb(72, 72, 119);
+    color: white;
+    padding:10px 30px 10px 30px;
+    margin-left:500px;
+    margin-bottom:20px;
+    font-family:sans-serif;
+    border:1px solid white
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.first-line {
+    font-weight: bold;
+}
+
+.second-line {
+    font-weight: lighter;
+}
+
+

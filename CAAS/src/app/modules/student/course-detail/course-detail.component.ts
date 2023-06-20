@@ -11,6 +11,7 @@ import { Renderer2 } from '@angular/core';
 export class CourseDetailComponent {
   featuredCourse = false;
   stackableCourse = false;
+  params=false;
   data = [
     {
       dates: '19 – 23 Jun 2023',
@@ -24,6 +25,9 @@ export class CourseDetailComponent {
     let urlPath=this.router.url.split('/')
     this.currentUrl=urlPath[urlPath.length - 1];
     this.activatedRoute.queryParams.subscribe((params: any) => {
+      if(!params.coursetype){
+        this.params=true;
+      }
       if(params.coursetype === 'featured-course'){
         this.featuredCourse = true;
       }
