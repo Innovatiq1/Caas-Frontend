@@ -13,7 +13,7 @@
   }  
   .fecourse{
     margin-right: 30px;
-    margin-left:80px;
+    margin-left:50px;
     font-size: 28px;
   }
   .nocourse{
@@ -159,14 +159,14 @@
 }
 .carouse-container{
   margin-bottom:40px;
-  margin-left:55px;
+  margin-left:35px;
 
 }
 .image-slider {
   display: flex;
   align-items: center;
   justify-content: start;
-  margin-left:8px;
+  margin-left:2px;
 }
 
 .slider {
@@ -388,7 +388,7 @@
     position: absolute;
     transition: all 0.3s linear;
     width: 15px;
-    margin-left: 15px;
+    margin-left: 5px;
     background-color: rgb(44, 88, 163);
     padding: 20px;
     border-radius: 10px;
