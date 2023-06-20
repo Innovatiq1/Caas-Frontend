@@ -194,7 +194,11 @@ ul li a:hover span {
     transition: border-color 0.3s, box-shadow 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-
+.profile-icon{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}
 .name-line {
     font-weight: bold;
     font-size: 15px;

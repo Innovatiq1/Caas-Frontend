@@ -42,12 +42,14 @@ font-size: 40px;  }
   padding:10px 60px 10px 40px;
   margin-right:20px;
   font-family:sans-serif;
-  border:1px solid white
+  border:1px solid white;
+  border-radius: 10px;
 
 }
 .lgbtn{
   margin-left:20px;
   color: white;
+  
 }
 .ortext{
   margin-left:50px
@@ -55,22 +57,35 @@ font-size: 40px;  }
 .field{
   margin-left:50px;
 }
-.btn{
-  margin-left:100px;
-  border-radius: 25px;
+/* .btn{
+   margin-left:100px;*
+  border-radius: 25px; 
   background-color: rgb(72, 72, 119);
   color: white;
   padding:10px 30px 10px 30px;
   margin-right:20px;
   margin-bottom:20px;
   font-family:sans-serif;
-  padding:10px 40px 10px 40px;
+  padding:20px;
   border:1px solid white
 
+} */
+.btn{
+  background-color: rgb(72, 72, 119);
+  border-radius: 10px; 
+  color: whitesmoke;
+  font-size: 15px;
+  padding: 12px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-left: 120px;
+}
+.field{
+  width: 250px;
 }
 .inptxt{
   margin-left:53px;
-  width:210px;
+  width:240px;
   padding:10px 0px 0px 10px;
   font-size:20px;
 }
@@ -87,5 +102,6 @@ font-size: 40px;  }
 }
 .verimg{
   margin-left:50px;
+  width: 300px;
 }
 

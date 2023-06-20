@@ -1,6 +1,8 @@
 <!-- <div *ngIf="currentUrl == 'course-detail'">
     <app-header></app-header>
     </div> -->
+    <button class="courses-button" (click)="navigateToCoursePage()">Back to Courses</button>
+
 <div *ngIf = "!stackableCourse" class="container">
     <h2 class="texts">Personnel Licensing (PEL) for Regulators 
     </h2>
@@ -71,10 +73,11 @@
     <h2 class="texts"> Who Should Attend</h2>
     <span>This course is recommended for Senior executives, managers or professionals who
       want to understand the challenges facing the industry
-      and have a good grounding in aviation management      
+      and have a good grounding in aviation management 
     </span><br><br>
     <h2 class="texts"> Programmes</h2>
-    <button class="sbtn" ><b>Aviation Management</b></button>
+    <button type="button" class="am-btn">Aviation Management</button>
+    <!-- <button class="sbtn" ><b>Aviation Management</b></button> -->
     <div class="left-half">
     <h2 class="pgm">Compulsory Programmes</h2>
     <div class="list-group">

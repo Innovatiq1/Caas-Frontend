@@ -30,7 +30,8 @@ const routes: Routes = [
   { path: 'landing', component: HomeLandingpageComponent},
   { path: 'courses', component: CoursesListComponent},
   { path: 'network', component: NetworkComponent},
-  { path: 'payment', component: PaymentComponent}
+  { path: 'payment', component: PaymentComponent},
+  { path: 'courses', component: CourseDetailComponent}
 
 
 ];

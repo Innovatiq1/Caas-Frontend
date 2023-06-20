@@ -41,6 +41,10 @@ export class CourseDetailComponent {
 
   
   }
+  navigateToCoursePage() {
+    this.router.navigate(['/courses']); 
+  }
+
   openDialog() {
     let email=localStorage.getItem('email');
     if(!email){
