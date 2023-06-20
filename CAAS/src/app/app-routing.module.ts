@@ -7,6 +7,7 @@ import { CourseDetailComponent } from './modules/student/course-detail/course-de
 import { ProfileDashboardComponent } from './modules/student/profile-dashboard/profile-dashboard.component';
 import { HomeLandingpageComponent } from './modules/student/home-landingpage/home-landingpage.component';
 import { CoursesListComponent } from './modules/student/courses-list/courses-list.component';
+import { NetworkComponent } from './modules/student/network/network.component';
 import { PaymentComponent } from './modules/student/payment/payment.component';
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileDashboardComponent},
   { path: 'landing', component: HomeLandingpageComponent},
   { path: 'courses', component: CoursesListComponent},
+  { path: 'network', component: NetworkComponent},
   { path: 'payment', component: PaymentComponent}
 
 

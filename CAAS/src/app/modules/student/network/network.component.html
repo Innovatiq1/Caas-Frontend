@@ -1,0 +1,87 @@
+<div class="container">
+    <header>
+        <!-- Header content -->
+        <div class="header">
+            <div class="title">
+                <img src="/assets/images/caaslogo.png" alt="logo" class="logo">
+
+                
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <button class="search-button"><mat-icon>search</mat-icon></button>
+            </div>
+            <div class="profile-container">
+                <h4 class="profile-name">Jhonny Daniel</h4>
+                <img src="../../../../assets/images/Profile.png" alt="Profile Image" class="profile-img">
+            </div>
+        </div>
+    </header>
+
+    <section class="sidebar">
+        <div class="sidebar-content">
+            <ul>
+                <li><a 
+                        (click)="navigateTo('profile')"><mat-icon>people</mat-icon><span>Profile</span></a></li>
+                <li><a href="Courses"
+                        (click)="navigateTo('Courses')"><mat-icon>school</mat-icon><span>Courses</span></a></li>
+                <li><a href="Schedule"
+                        (click)="navigateTo('Schedule')"><mat-icon>schedule</mat-icon><span>Schedule</span></a></li>
+                <li><a href="Survey"
+                        (click)="navigateTo('Survey')"><mat-icon>my_library_books</mat-icon><span>Survey</span></a>
+                </li>
+                <li><a href="Network"
+                        (click)="navigateTo('Network')"><mat-icon>people</mat-icon><span>Network</span></a></li>
+                <li><a href="Chat" (click)="navigateTo('Chat')"><mat-icon>chat</mat-icon><span>Chat</span></a></li>
+                <li><a href="Settings"
+                        (click)="navigateTo('Settings')"><mat-icon>settings</mat-icon><span>Settings</span></a></li>
+            </ul>
+        </div>
+    </section>
+    <main>
+        <div class="body">
+            <h1 class="network-name">Widen your network without hassle</h1>
+
+            <button type="button" class="network-btn">My Network</button>
+            <button type="button" class="following-btn">Following</button>
+            <button type="button" class="suggested-btn">Suggested Network</button>
+            
+            <div class="network-search">
+                <input type="text" placeholder="Search..." class="network-input">
+                <button class="network-btn1"><mat-icon>search</mat-icon></button>
+            </div>
+            <div>
+                <img src="assets/images/network1.png" alt="network1-img" class="network1-img">
+            </div>
+            <div>
+                <img src="assets/images/network2.png" alt="network2-img" class="network2-img">
+            </div>
+            <div>
+                <img src="assets/images/network3.png" alt="network3-img" class="network3-img">
+            </div>
+            <div>
+                <img src="assets/images/network4.png" alt="network4-img" class="network4-img">
+            </div>
+            <div>
+                <img src="assets/images/network-add.png" alt="network-add-img" class="network-add-img">
+            </div>
+        </div>
+        
+    </main>
+
+
+    <footer>
+        ​<div class="footer">
+            <div>
+                <p><span class="first-line">© 2023 CAAS. All rights reserved.</span><br><span
+                        class="second-line">Terms of services private policy</span></p>
+            </div>
+
+            <div class="right-content">
+                <p>Powered by Innovatiq</p>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
