@@ -68,6 +68,12 @@ font-size: 40px;  }
   border:1px solid white
 
 }
+.inptxt{
+  margin-left:53px;
+  width:210px;
+  padding:10px 0px 0px 10px;
+  font-size:20px;
+}
 .fpswrd{
   margin-left:120px;
   color:palevioletred
