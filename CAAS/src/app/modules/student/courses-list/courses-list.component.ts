@@ -143,7 +143,6 @@ mywishlistCourses: MyCourse[] = [
   { src: '/assets/images/course9.png', alt: 'Image 9',text: '3 Months at 3-4 Hrs Per/Week',title:'Senior Airport Fire Officers' ,dates:'01 Jun - 15 Oct 2023' },
   { src: '/assets/images/course4.png', alt: 'Image 4' ,text: '3 Months at 3-4 Hrs Per/Week',title:'Safety Oversight Inspectors',dates:'01 Jun - 15 Oct 2023' },
 ];
-
 stackableImage: Stackable[] = [
   { src: '/assets/images/stackable1.png' ,title:'Civil Aviation Management',text:'This programme comprises both compulsory and elective courses. You may select up to 2 compulsory courses and any elective course based on your profession or areas of interest.'},
   { src: '/assets/images/stackable2.png',title:'Aviation Safety',text:'This programme comprises both compulsory and elective courses. You may select up to 7 compulsory courses and any elective course based on your profession or areas of interest.' },
