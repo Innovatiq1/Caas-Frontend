@@ -29,8 +29,8 @@
                     <li><a href="Survey"
                             (click)="navigateTo('Survey')"><mat-icon>my_library_books</mat-icon><span>Survey</span></a>
                     </li>
-                    <li><a href="Network"
-                            (click)="navigateTo('Network')"><mat-icon>people</mat-icon><span>Network</span></a></li>
+                    <li><a
+                            (click)="navigateTo('network')"><mat-icon>people</mat-icon><span>Network</span></a></li>
                     <li><a href="Chat" (click)="navigateTo('Chat')"><mat-icon>chat</mat-icon><span>Chat</span></a></li>
                     <li><a href="Settings"
                             (click)="navigateTo('Settings')"><mat-icon>settings</mat-icon><span>Settings</span></a></li>
@@ -41,6 +41,54 @@
     </main>
     <div class="sub-container">
         <br>
+        <h2 class="fecourse">My Courses in Progress</h2>
+        <!-- <h4 class="nocourse">No Courses in Progress</h4> -->
+        <div class="carouse-container">
+
+            <div class="image-slider">
+              <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
+              <div class="slider">
+                <div  class="images-container" *ngFor="let image of myInprogressCourses; let i = index">
+                  <img  class="carousel"[src]="image.src" [alt]="image.alt">
+                  <h2 class="titletexts" >{{image.title}}</h2>
+                  <span class="content-texts">{{ image.text }}</span>
+                  <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
+                  <!-- <a href="../../../../assets/course.pdf" target="_blank" class="abtn" ><b>Download</b></a> -->
+    
+                </div>
+              </div>
+              <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
+            </div>
+            
+          </div>
+    
+
+
+        <br><br>
+        <h2 class="fecourse">My Pending Courses</h2>
+        <!-- <h4 class="nocourse">No Pending Courses</h4><br><br> -->
+        <div class="carouse-container">
+
+            <div class="image-slider">
+              <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
+              <div class="slider">
+                <div  class="images-container" *ngFor="let image of myPendingCourses; let i = index">
+                  <img  class="carousel" [src]="image.src" [alt]="image.alt">
+                  <h2 class="titletexts" >{{image.title}}</h2>
+                  <span class="content-texts">{{ image.text }}</span>
+                  <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
+                  <!-- <a href="../../../../assets/course.pdf" target="_blank" class="abtn" ><b>Download</b></a> -->
+    
+                </div>
+              </div>
+              <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
+            </div>
+            
+          </div>
+    
+<br><br>
+
+
         <h2 class="fecourse">Featured Courses by CAAS</h2>
         <div class="carouse-container">
         <div class="image-slider">
@@ -57,7 +105,7 @@
           <button class="slider-btn" (click)="showNextImages()" [hidden]="isLastPage()"><span class="lt">&gt;</span></button>
         </div>
         
-      </div>
+      </div><br>
       <h2 class="fecourse">Stackable Programmes by CAAS</h2>
       <div class="carouse-container">
         <div class="image-slider">
@@ -75,7 +123,57 @@
         </div>
         
       </div>
-    <br><br>
+    <br>
+    <br>
+    <h2 class="fecourse">My Courses Watchlist</h2>
+    <div class="carouse-container">
+
+        <div class="image-slider">
+          <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
+          <div class="slider">
+            <div  class="images-container" *ngFor="let image of mywishlistCourses; let i = index">
+              <img  class="carousel"[src]="image.src" [alt]="image.alt">
+              <div class="flex">
+              <h2 class="titletexts" >{{image.title}}</h2>
+              <!-- <img class="wishlist" src="../../../../assets/images/wishlist.png"> -->
+            </div>
+              <span class="content-texts">{{ image.text }}</span>
+              <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
+              <!-- <a href="../../../../assets/course.pdf" target="_blank" class="abtn" ><b>Download</b></a> -->
+
+            </div>
+          </div>
+          <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
+        </div>
+        
+      </div>
+
+    <!-- <h4 class="nocourse">No Courses in Watchlist</h4> -->
+    <br>
+    <h2 class="fecourse">My Completed Courses</h2>
+    <!-- <h4 class="nocourse">No Completed Courses</h4> -->
+    <div class="carouse-container">
+
+        <div class="image-slider">
+          <!-- <button class="slider-btn" [hidden]="isFirstMyCourse()"><span class="lt">&lt;</span></button> -->
+          <div class="slider">
+            <div  class="images-container" *ngFor="let image of myCourses; let i = index">
+              <img  class="carousel" [src]="image.src" [alt]="image.alt">
+              <h2 class="titletexts" >{{image.title}}</h2>
+              <span class="content-texts">{{ image.text }}</span>
+              <span class="date-texts"><strong>Dates:{{ image.dates }}</strong></span><br>
+              <a href="../../../../assets/course.pdf" target="_blank" class="abtn" ><b>Download</b></a>
+
+            </div>
+          </div>
+          <!-- <button class="slider-btn" [hidden]="isLastMyCousre()"><span class="lt">&gt;</span></button> -->
+        </div>
+        
+      </div>
+
+
+
+
     <footer>
       ​<div class="footer">
           <div>

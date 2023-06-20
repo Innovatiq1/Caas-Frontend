@@ -7,6 +7,14 @@ interface Image {
   title:string;
   dates:string;
 }
+interface MyCourse {
+  src: string;
+  alt: string;
+  text:string;
+  title:string;
+  dates:string;
+}
+
 interface Stackable {
   src: string;
   // alt: string;
@@ -24,6 +32,7 @@ interface Stackable {
 export class CoursesListComponent {
   visibleImages: Image[] = [];
 stackableImages: Stackable[] = [];
+myCourseImages: MyCourse[] = [];
 
   constructor(
     private router: Router){
@@ -35,6 +44,10 @@ stackableImages: Stackable[] = [];
       this.router.navigate(['/courses'])
 
     }
+    else if(route == 'network'){
+      this.router.navigate(['/network'])
+
+    }
   }
   currentIndex = 0;
 stackIndex = 0;
@@ -43,10 +56,17 @@ stackIndex = 0;
 ngOnInit() {
   this.updateVisibleImages();
   this.updateVisibleStack();
+  this.updateVisibleMyCourse();
 
 }
 
 updateVisibleImages() {
+  const startIndex = this.currentIndex;
+  const endIndex = this.currentIndex + 4;
+  this.visibleImages = this.images.slice(startIndex, endIndex);
+
+}
+updateVisibleMyCourse() {
   const startIndex = this.currentIndex;
   const endIndex = this.currentIndex + 4;
   this.visibleImages = this.images.slice(startIndex, endIndex);
@@ -100,12 +120,43 @@ images: Image[] = [
   { src: '/assets/images/course6.png', alt: 'Image 6',text: '3 Months at 3-4 Hrs Per/Week',title:'ICAO PANS-OPS Instrument Procedures',dates:'01 Jun - 15 Oct 2023' },
   { src: '/assets/images/course8.png', alt: 'Image 8',text: '4 Days at 3-4 Hrs Per/Day' ,title:'Aviation Security Programme in Public Policy',dates:'19 Jun - 23 Jun 2023' },
 ];
+myCourses: MyCourse[] = [
+  { src: '/assets/images/course9.png', alt: 'Image 9',text: '3 Months at 3-4 Hrs Per/Week',title:'Senior Airport Fire Officers' ,dates:'01 Jun - 15 Oct 2023' },
+];
+mywishlistCourses: MyCourse[] = [
+  // { src: '/assets/images/course1.png', alt: 'Image 1',text: '2 Months at 5-10 Hrs Per/Week',title:'Personnel Licensing for Regulators',dates:'19 Jun - 23 Aug 2023' },
+  { src: '/assets/images/course9.png', alt: 'Image 9',text: '3 Months at 3-4 Hrs Per/Week',title:'Senior Airport Fire Officers' ,dates:'01 Jun - 15 Oct 2023' },
+  { src: '/assets/images/course4.png', alt: 'Image 4' ,text: '3 Months at 3-4 Hrs Per/Week',title:'Safety Oversight Inspectors',dates:'01 Jun - 15 Oct 2023' },
+];
+
 stackableImage: Stackable[] = [
   { src: '/assets/images/stackable1.png' ,title:'Civil Aviation Management',text:'This programme comprises both compulsory and elective courses. You may select up to 2 compulsory courses and any elective course based on your profession or areas of interest.'},
   { src: '/assets/images/stackable2.png',title:'Aviation Safety',text:'This programme comprises both compulsory and elective courses. You may select up to 7 compulsory courses and any elective course based on your profession or areas of interest.' },
   { src: '/assets/images/stackable4.png',title:'Aviation Security',text:'This programme comprises both compulsory and elective courses. You may select up to 1 compulsory courses and any elective course based on your profession or areas of interest.' },
   { src: '/assets/images/stackable3.png',title:'Air Traffic Services',text:'This programme comprises both compulsory and elective courses. You may select up to 2 compulsory courses and any elective course based on your profession or areas of interest.' },
 ];
+myInprogressCourses: MyCourse[] = [
+  // { src: '/assets/images/course1.png', alt: 'Image 1',text: '2 Months at 5-10 Hrs Per/Week',title:'Personnel Licensing for Regulators',dates:'19 Jun - 23 Aug 2023' },
+  // { src: '/assets/images/course4.png', alt: 'Image 4' ,text: '3 Months at 3-4 Hrs Per/Week',title:'Safety Oversight Inspectors',dates:'01 Jun - 15 Oct 2023' },
+  // { src: '/assets/images/course5.png', alt: 'Image 5',text: '2 Months at 5-10 Hrs Per/Week' ,title:'Junior Airport Fire Officers',dates:'19 Jun - 23 Aug 2023' },
+  // { src: '/assets/images/course7.png', alt: 'Image 7',text: '3 Months at 3-4 Hrs Per/Week' ,title:'State Safety Programme Implementation',dates:'01 Jun - 15 Oct 2023' },
+  { src: '/assets/images/course2.png', alt: 'Image 2',text: '1 Month at 10 Hrs Per/Week',title:'Aeronautical Search and Rescue Operations',dates:'01 Jun - 30 Jun 2023'  },
+  { src: '/assets/images/course3.png', alt: 'Image 3' ,text: '15 Days at 5-10 Hrs Per/Day',title:'Electronics Personnel Communications',dates:'19 Jun - 30 Jun 2023' },
+  { src: '/assets/images/course6.png', alt: 'Image 6',text: '3 Months at 3-4 Hrs Per/Week',title:'ICAO PANS-OPS Instrument Procedures',dates:'01 Jun - 15 Oct 2023' },
+  { src: '/assets/images/course8.png', alt: 'Image 8',text: '4 Days at 3-4 Hrs Per/Day' ,title:'Aviation Security Programme in Public Policy',dates:'19 Jun - 23 Jun 2023' },
+];
+myPendingCourses: MyCourse[] = [
+  { src: '/assets/images/course1.png', alt: 'Image 1',text: '2 Months at 5-10 Hrs Per/Week',title:'Personnel Licensing for Regulators',dates:'19 Jun - 23 Aug 2023' },
+  // { src: '/assets/images/course4.png', alt: 'Image 4' ,text: '3 Months at 3-4 Hrs Per/Week',title:'Safety Oversight Inspectors',dates:'01 Jun - 15 Oct 2023' },
+  { src: '/assets/images/course5.png', alt: 'Image 5',text: '2 Months at 5-10 Hrs Per/Week' ,title:'Junior Airport Fire Officers',dates:'19 Jun - 23 Aug 2023' },
+  // { src: '/assets/images/course7.png', alt: 'Image 7',text: '3 Months at 3-4 Hrs Per/Week' ,title:'State Safety Programme Implementation',dates:'01 Jun - 15 Oct 2023' },
+  // { src: '/assets/images/course2.png', alt: 'Image 2',text: '1 Month at 10 Hrs Per/Week',title:'Aeronautical Search and Rescue Operations',dates:'01 Jun - 30 Jun 2023'  },
+  // { src: '/assets/images/course3.png', alt: 'Image 3' ,text: '15 Days at 5-10 Hrs Per/Day',title:'Electronics Personnel Communications',dates:'19 Jun - 30 Jun 2023' },
+  // { src: '/assets/images/course6.png', alt: 'Image 6',text: '3 Months at 3-4 Hrs Per/Week',title:'ICAO PANS-OPS Instrument Procedures',dates:'01 Jun - 15 Oct 2023' },
+  // { src: '/assets/images/course8.png', alt: 'Image 8',text: '4 Days at 3-4 Hrs Per/Day' ,title:'Aviation Security Programme in Public Policy',dates:'19 Jun - 23 Jun 2023' },
+];
+
+
 
   navigate(){
     this.router.navigate(['/login']);

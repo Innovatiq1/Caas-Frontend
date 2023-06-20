@@ -14,6 +14,9 @@ export class NetworkComponent {
     } else if(route == 'courses'){
       this.router.navigate(['/courses'])
 
+    }else if(route == 'network'){
+      this.router.navigate(['/network'])
+
     }
   }
 }

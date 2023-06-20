@@ -15,6 +15,12 @@
     margin-left:80px;
     font-size: 28px;
   }
+  .nocourse{
+    margin-left:80px;
+    font-size: 20px;
+    color: rgb(72, 72, 119);
+  }
+
   .titletexts{
     font-size:17px;
     cursor: pointer;
@@ -242,6 +248,27 @@
   border:1px solid white
 
 }
+.abtn{
+    border-radius: 20px;
+
+    background-color: rgb(72, 72, 119);
+    color: white;
+    padding:10px 0px 10px 30px;
+    margin-right:10px;
+    margin-bottom:20px;
+    font-family:sans-serif;
+    max-width:40%;
+    border:1px solid white;
+    text-decoration: none;
+  
+  }
+  .wishlist{
+    width: 5px;
+    height: 4000px;
+
+    /* width:10px;
+    height:10px; */
+  }
 .footer {
   display: flex;
   justify-content: space-between;

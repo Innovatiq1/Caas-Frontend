@@ -15,6 +15,8 @@ export class ProfileDashboardComponent {
     this.router.navigate(['/profile'])
     } else if(route == 'courses'){
       this.router.navigate(['/courses'])
+    } else if(route == 'network'){
+      this.router.navigate(['/network'])
     }
   }
 

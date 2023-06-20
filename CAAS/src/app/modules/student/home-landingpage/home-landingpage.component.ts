@@ -26,6 +26,8 @@ export class HomeLandingpageComponent implements OnInit {
       this.router.navigate(['/profile'])
       } else if(route == 'courses'){
         this.router.navigate(['/courses'])
+      } else if(route == 'network'){
+        this.router.navigate(['/network'])
       }
     }
   ngOnInit(){
