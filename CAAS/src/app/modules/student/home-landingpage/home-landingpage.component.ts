@@ -30,6 +30,12 @@ export class HomeLandingpageComponent implements OnInit {
         this.router.navigate(['/network'])
       }
     }
+    logout(){
+      localStorage.clear();
+      this.router.navigate(['/home'])
+    
+    }
+  
   ngOnInit(){
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
