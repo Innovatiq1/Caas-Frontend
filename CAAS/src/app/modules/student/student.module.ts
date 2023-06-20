@@ -13,6 +13,7 @@ import { HomeLandingpageComponent } from './home-landingpage/home-landingpage.co
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { NetworkComponent } from './network/network.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ApplicationDialogComponent } from './application-dialog/application-dialog.component';
 
 const route: Routes = [
   // {
@@ -35,7 +36,8 @@ const route: Routes = [
     HomeLandingpageComponent,
     CoursesListComponent,
     NetworkComponent,
-    PaymentComponent
+    PaymentComponent,
+    ApplicationDialogComponent
 
   ],
   imports: [

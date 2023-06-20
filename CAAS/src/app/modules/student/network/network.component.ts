@@ -19,4 +19,10 @@ export class NetworkComponent {
 
     }
   }
+  logout(){
+    localStorage.clear();
+    this.router.navigate(['/home'])
+  
+  }
+  
 }

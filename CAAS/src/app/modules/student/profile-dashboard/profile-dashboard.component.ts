@@ -19,5 +19,11 @@ export class ProfileDashboardComponent {
       this.router.navigate(['/network'])
     }
   }
+  logout(){
+    localStorage.clear();
+    this.router.navigate(['/home'])
+  
+  }
+  
 
 }

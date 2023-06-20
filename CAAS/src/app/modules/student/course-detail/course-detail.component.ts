@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Renderer2 } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ApplicationDialogComponent } from '../application-dialog/application-dialog.component';
 
 
 @Component({
@@ -21,7 +23,8 @@ export class CourseDetailComponent {
     }
   ];
   currentUrl: string;
-  constructor(private router: Router,private activatedRoute: ActivatedRoute,private renderer: Renderer2){
+  constructor(private router: Router,private activatedRoute: ActivatedRoute,private renderer: Renderer2,
+    private dialog: MatDialog){
     let urlPath=this.router.url.split('/')
     this.currentUrl=urlPath[urlPath.length - 1];
     this.activatedRoute.queryParams.subscribe((params: any) => {
@@ -38,6 +41,15 @@ export class CourseDetailComponent {
 
   
   }
+  openDialog() {
+    let email=localStorage.getItem('email');
+    if(!email){
+      this.router.navigate(['/login']);
+  } else {
+  const dialogRef = this.dialog.open(ApplicationDialogComponent);
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }}
   navigate(){
     let email=localStorage.getItem('email');
     if(!email){

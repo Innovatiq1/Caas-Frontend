@@ -59,6 +59,16 @@ ngOnInit() {
   this.updateVisibleMyCourse();
 
 }
+isDropdownOpen: boolean = false;
+
+toggleDropdown(): void {
+  this.isDropdownOpen = true;
+}
+logout(){
+  localStorage.clear();
+  this.router.navigate(['/home'])
+
+}
 
 updateVisibleImages() {
   const startIndex = this.currentIndex;
