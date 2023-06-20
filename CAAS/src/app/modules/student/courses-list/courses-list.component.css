@@ -7,11 +7,12 @@
   }  
   .sub-container {
     background-color:#f0f0f0;
-    margin-left:5px;
+    margin-left:80px;
     position: flex;
 
   }  
   .fecourse{
+    margin-right: 30px;
     margin-left:80px;
     font-size: 28px;
   }
@@ -250,16 +251,15 @@
 }
 .abtn{
     border-radius: 20px;
-
     background-color: rgb(72, 72, 119);
     color: white;
     padding:10px 0px 10px 30px;
-    margin-right:10px;
-    margin-bottom:20px;
+    margin-left: 50px;
     font-family:sans-serif;
     max-width:40%;
     border:1px solid white;
     text-decoration: none;
+    padding-left: 50px;
   
   }
   .wishlist{
